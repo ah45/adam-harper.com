@@ -167,6 +167,7 @@ mark {
     color: #000;
     font-family: var(--ff-sans-em);
     font-style: normal;
+    padding: 0px 0.2em;
   }
 
   .resume__example-roles {
