@@ -5,9 +5,9 @@ html {
   --base-leading: var(--base-line-height);
 
   --ff-serif: 'Garamond', serif;
-  --ff-sans:  'Gill Sans', sans-serif;
+  --ff-sans:  'Gill Sans', 'Gill Sans MT', sans-serif;
   --ff-serif-em: 'Cambria', serif;
-  --ff-sans-em:  'Helvetica', sans-serif;
+  --ff-sans-em:  'Lato', 'Helvetica', sans-serif;
 }
 
 *,
