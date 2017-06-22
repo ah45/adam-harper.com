@@ -1,0 +1,199 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title #{locals.owner} Résumé
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Josefin+Sans:700|Montserrat+Alternates|Old+Standard+TT|Philosopher')
+      link(rel='stylesheet', href=contents.css['normalize.css'].url)
+      link(rel='stylesheet', href=contents.css['resume.print.css'].url)
+      | !{ livereloadScript }
+  body
+    header
+      h1 Adam Harper
+      dl.address
+       dt.address__physical Address
+       dd.address__physical Southampton, United Kingdom
+
+       dt.address__telephone Contact Number
+       dd.address__telephone +44 (0) 7597 265740
+
+       dt.address__email Email
+       dd.address__email
+         a(href="mailto:hire@adam-harper.com") hire@adam-harper.com
+
+       dt.address__github Github
+       dd.address__github
+         a(href="https://github.com/ah45")
+          span.url__domain github.com
+          span.url__path /ah45
+
+    section.resume__summary
+      h2.resume__example-roles.
+        Software Engineer,
+        Data Analyst,
+        Back/Front-End Developer,
+        Project&nbsp;Manager
+
+      p.resume__tagline.
+        Experienced developer of <em>creative solutions</em>
+        under challenging and constrained conditions.
+
+      p.
+        Highly self-motivated and pro-active,
+        with over 10 years of full-stack software development experience
+        and more than 15 years working with and managing all aspects of IT.
+        Skilled at seeing the bigger picture and identifying unmet needs.
+        Excellent project management skills and ability to work flexibly.
+        Adept at working in mixed teams,
+        always looking to share, teach, and learn with others.
+
+    aside
+      section.resume__competencies
+        h3 Core Competencies
+        ul
+          li Functional Programming
+          li Domain Driven Design
+          li Generative Testing
+          li Microservices
+          li Event Sourcing
+          li Stream Processing
+          li Project Management
+          li Process Automation
+          li Mentoring
+      section.resume__languages
+        h3 Language Proficiencies
+        ul
+          li.language__clojure Clojure
+          li.language__fsharp F#
+          li.language__ruby Ruby
+          li.language__sql SQL & PL/SQL
+          li.language__javascript Javascript
+          li.language__html HTML & CSS
+      section.resume__technologies
+        h3 Technology Experience
+        ul
+          li.technology__kafka Apache Kafka
+          li.technology__docker Docker
+          li.technology__kubernetes Kubernetes
+          li.technology__vsphere VMware vSphere
+          li.technology__oracle Oracle Database
+
+    section.resume__work-experience
+      h2 Professional Experience
+
+      article.resume__job
+        h3.job__title Business Systems Development Manager
+        p.job__period 2012—Present
+        p.job__employer Lymington Precision Engineers Co. Ltd., Hampshire, United Kingdom
+
+        ul.job__accomplishments
+          li.
+            Enabled real-time, stream based, data analysis by
+            implementing database Change Data Capture.
+          li.
+            Helped drive 10% reduction in production lead times by
+            customising business system to support new processes and
+            production methodologies.
+          li.
+            Provided real-time production feedback on the factory floor
+            by writing bespoke dashboard software.
+          li.
+            Automated Key Performance Indicator (KPI) production and
+            distribution (Web and PDF) across the business.
+          li.
+            Delivered improved manufacturing estimates by developing a
+            finite scheduling and due-date quotation system.
+          li.
+            Streamlined supplier quotation submittal and analysis by
+            implementing a web/email based system.
+          li.
+            Automated customer order validation and entry, processing
+            complicated orders containing several hundred line items.
+          li.
+            Mentored junior team members.
+
+      article.resume__job
+        h3.job__title Technical Lead – Enterprise Resource Planning (ERP) Implementation
+        p.job__period 2010—2012
+        p.job__employer Lymington Precision Engineers Co. Ltd., Hampshire, United Kingdom
+
+        ul.job__accomplishments
+          li.
+            Provided business continuity by re-writing all existing
+            reports and bespoke programs to work with&nbsp;the&nbsp;new&nbsp;system.
+          li.
+            Facilitated rapid project iteration by automating data
+            sanitization, transformation, and migration.
+          li.
+            Simplified system outputs with a clear, standardized, design
+            style/language.
+          li.
+            Edited and reviewed all project documentation for
+            consistency and accuracy.
+          li.
+            Produced and presented training materials covering common
+            system operational areas.
+          li.
+            Delivered all technical aspects of the project to schedule.
+          li.
+            Modernized IT infrastructure, providing full project management.
+          li.
+            Managed hiring and training of additional IT personnel.
+
+      article.resume__job
+        h3.job__title IT Manager
+        p.job__period 2007—2010
+        p.job__employer The Fullers-Group, Hampshire, United Kingdom
+
+        ul.job__accomplishments
+          li.
+            Developed Web portals for on-line, on-demand,
+            information sharing with customers and suppliers.
+          li.
+            Project managed (and partly developed) touch screen terminal
+            software for Shop Floor Data Capture.
+          li.
+            Enhanced business processes via the development of programs,
+            new systems, and reports.
+
+      article.resume__job
+        h3.job__title IT Technician
+        p.job__period 2001—2007
+        p.job__employer The Fullers-Group, Hampshire, United Kingdom
+
+    section.resume__extras
+      article.resume__education
+        h2 Education
+        p.
+          As a highly self-driven learner I have pursued many interests
+          both within IT and other subjects.
+          Some of the more formal courses I have undertaken,
+          through the Open University, are:
+        ul
+          li
+            | Design and Designing
+            mark (distinction)
+          li
+            | Computing: An Object-Oriented Approach
+            mark (distinction)
+          li Computers and Processors
+          li Certificate in Mathematics
+          li Functional Programming in Erlang
+          li Functional Programming in Haskell
+          li Data to Insight: Introduction to Data Analysis
+          li From Notation to Performance: Understanding Musical Scores
+
+      article.resume__interests
+        h2 Interests
+        ul
+          li Learning to play piano and studying music
+          li Scuba Diving
+          li Tabletop–board/card–game design
+          li Role-playing games, playing and running as the <abbr title="Games Master">GM</abbr>
+          li Collaborative storytelling and creative&nbsp;writing
+          li Travelling and writing travelogues
+          li Photography
+          li Baking and chocolate making
