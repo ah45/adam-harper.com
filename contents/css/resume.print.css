@@ -79,6 +79,11 @@ mark {
   abbr[title] { text-decoration: none; }
   abbr[title]:after { content: " (" attr(title) ")"; }
 
+  .job__accomplishments a[href]:after {
+    font-size: 0.8335em;
+    content: " (" attr(href) ")";
+  }
+
   ul {
     list-style: none;
   }
