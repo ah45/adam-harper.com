@@ -8,27 +8,29 @@ html(lang='en')
       title #{locals.owner} Résumé
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
       link(rel='stylesheet', href=contents.css['normalize.css'].url)
+      link(rel='stylesheet', href=contents.css['resume.screen.css'].url)
       link(rel='stylesheet', href=contents.css['resume.print.css'].url)
       | !{ livereloadScript }
   body
     header
       h1 Adam Harper
-      dl.address
-       dt.address__physical Address
-       dd.address__physical Southampton, United Kingdom
 
-       dt.address__telephone Contact Number
-       dd.address__telephone +44 (0) 7597 265740
+    dl.address
+     dt.address__physical Address
+     dd.address__physical Southampton, United Kingdom
 
-       dt.address__email Email
-       dd.address__email
-         a(href="mailto:hire@adam-harper.com") hire@adam-harper.com
+     dt.address__telephone Contact Number
+     dd.address__telephone +44 (0) 7597 265740
 
-       dt.address__github Github
-       dd.address__github
-         a(href="https://github.com/ah45")
-          span.url__domain github.com
-          span.url__path /ah45
+     dt.address__email Email
+     dd.address__email
+       a(href="mailto:hire@adam-harper.com") hire@adam-harper.com
+
+     dt.address__github Github
+     dd.address__github
+       a(href="https://github.com/ah45")
+        span.url__domain github.com
+        span.url__path /ah45
 
     section.resume__summary
       h2.resume__example-roles.

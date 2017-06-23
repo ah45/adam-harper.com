@@ -1,33 +1,4 @@
-html {
-  --body-text-color: #404040;
-  --base-font-size: 12pt;
-  --base-line-height: 27px;
-  --base-leading: var(--base-line-height);
-
-  --ff-serif: 'Garamond', serif;
-  --ff-sans:  'Gill Sans', 'Gill Sans MT', sans-serif;
-  --ff-serif-em: 'Cambria', serif;
-  --ff-sans-em:  'Lato', 'Helvetica', sans-serif;
-}
-
-*,
-h1, h2, h3, h4, h5, h6,
-p {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  color: var(--body-text-color);
-}
-
-mark {
-  background: transparent;
-  color: var(--body-text-color);
-}
-
-
-/*@media print {*/
+@media print {
   @page {
     size: A4 portrait;
     margin: 1.5cm 1.25cm 1.25cm calc(1.25cm - 50px);
@@ -39,33 +10,11 @@ mark {
 
   body {
     margin-left: 50px;
-  }
-
-  body {
     background: white;
-    font-size: var(--base-font-size);
     font-family: var(--ff-serif);
-    line-height: var(--base-leading);
-  }
-
-  h1 { font-size: 3.375em; line-height: calc(var(--base-leading) * 3); }
-  h2 { font-size: 2.250em; line-height: calc(var(--base-leading) * 2); }
-  h3 {
-    font-size: 1.5em;
-    line-height: calc(var(--base-leading) * 1.25);
-    margin-bottom: calc(var(--base-leading) * 0.75);
   }
 
   h1, h2, h3 { font-family: var(--ff-sans); }
-
-  h4,
-  h5,
-  h6,
-  p,
-  li {
-    font-size: var(--base-font-size);
-    line-height: var(--base-leading);
-  }
 
   a:link,
   a:hover,
@@ -113,11 +62,6 @@ mark {
     background-size: 16px auto;
   }
 
-  dd.address__physical { background-image: url("/icons/globe.svg"); }
-  dd.address__telephone { background-image: url("/icons/phone.svg"); }
-  dd.address__email { background-image: url("/icons/email.svg"); }
-  dd.address__github { background-image: url("/icons/github.svg"); }
-
   dd.address__github {
     display: block;
     position: absolute;
@@ -153,21 +97,13 @@ mark {
   .resume__job:first-of-type .job__accomplishments { margin-right: 0px; }
 
   .resume__tagline {
-    margin-top: var(--base-leading);
-    margin-bottom: var(--base-leading);
-
     font-family: var(--ff-serif-em);
-    font-size: 1.45em;
-    line-height: var(--base-leading);
-
     font-style: italic;
   }
 
   .resume__tagline em {
-    color: #000;
     font-family: var(--ff-sans-em);
     font-style: normal;
-    padding: 0px 0.2em;
   }
 
   .resume__example-roles {
@@ -213,40 +149,10 @@ mark {
     line-height: var(--base-leading);
   }
 
-  .job__title {
-    margin: 0px;
-
-    font-size: 1.337em;
-    line-height: var(--base-leading);
-
-    font-weight: normal;
-  }
-
-  .job__period {
-    display: inline;
-  }
-
-  .job__period::after { content: ", "; }
-
-  .job__employer {
-    display: inline;
-    font-size: 0.667em;
-  }
-
-  .job__period,
-  .job__employer {
-    font-family: sans-serif;
-    color: #808080;
-  }
-
   .job__accomplishments {
     list-style: disc;
   }
 
-  .job__accomplishments li {
-  }
-
-  .resume__job { margin-bottom: var(--base-leading); }
   .resume__job:nth-of-type(2) { page-break-before: always; }
 
   .resume__languages li {
@@ -300,4 +206,4 @@ mark {
     font-size: 1.337em;
     line-height: var(--base-leading);
   }
-/*}*/
+}

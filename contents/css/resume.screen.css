@@ -1,0 +1,242 @@
+html {
+  --body-text-color: #404040;
+  --base-font-size: 12pt;
+  --base-line-height: 27px;
+  --base-leading: var(--base-line-height);
+
+  --ff-serif: 'Garamond', serif;
+  --ff-sans:  'Gill Sans', 'Gill Sans MT', sans-serif;
+  --ff-serif-em: 'Cambria', serif;
+  --ff-sans-em:  'Lato', 'Helvetica', sans-serif;
+}
+
+*,
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  color: var(--body-text-color);
+  font-size: var(--base-font-size);
+  font-family: var(--ff-sans);
+  line-height: var(--base-leading);
+}
+
+h1 { font-size: 3.375em; line-height: calc(var(--base-leading) * 3); }
+h2 { font-size: 2.250em; line-height: calc(var(--base-leading) * 2); }
+h3 {
+  font-size: 1.5em;
+  line-height: calc(var(--base-leading) * 1.25);
+  margin-bottom: calc(var(--base-leading) * 0.75);
+}
+
+h1, h2, h3 { font-family: var(--ff-sans-em); }
+
+h4,
+h5,
+h6,
+p,
+li {
+  font-size: var(--base-font-size);
+  line-height: var(--base-leading);
+}
+
+mark {
+  background: transparent;
+  color: var(--body-text-color);
+}
+
+.resume__tagline {
+  margin-top: var(--base-leading);
+  margin-bottom: var(--base-leading);
+
+  font-size: 1.45em;
+  line-height: var(--base-leading);
+}
+
+.resume__tagline em {
+  color: #000;
+  padding: 0px 0.2em;
+}
+
+dd.address__physical { background-image: url("/icons/globe.svg"); }
+dd.address__telephone { background-image: url("/icons/phone.svg"); }
+dd.address__email { background-image: url("/icons/email.svg"); }
+dd.address__github { background-image: url("/icons/github.svg"); }
+
+.resume__job { margin-bottom: var(--base-leading); }
+
+.job__title {
+  margin: 0px;
+
+  font-size: 1.337em;
+  line-height: var(--base-leading);
+
+  font-weight: normal;
+}
+
+.job__period { display: inline; }
+
+.job__period::after { content: ", "; }
+
+.job__employer {
+  display: inline;
+  font-size: 0.667em;
+}
+
+.job__period,
+.job__employer {
+  font-family: sans-serif;
+  color: #808080;
+}
+
+@media screen {
+  br { display: none; }
+
+  ul { list-style: none; }
+
+  li { position: relative; }
+
+  li::before {
+    display: block;
+    position: absolute;
+    top: -0.1ex;
+    left: -1em;
+    content: "\0bb \020";
+    color: #b4c2e4;
+  }
+}
+
+@media screen {
+  body {
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin: 5vh 5vw calc(10vh + 1em) 5vw;
+    min-height: 100vh;
+  }
+
+  header                   { order: 1; }
+  .resume__summary         { order: 2; }
+  .resume__work-experience { order: 4; }
+  aside                    { order: 3; }
+  .resume__extras          { order: 5; }
+
+  header { margin-top: 25vh; }
+  .resume__summary { height: 75vh; }
+
+  header h1 {
+    font-family: var(--ff-sans-em);
+    text-align: center;
+  }
+
+  .resume__example-roles,
+  .resume__tagline {
+    text-align: center;
+  }
+
+  .resume__example-roles {
+    font-family: var(--ff-sans);
+    font-size: var(--base-font-size);
+    font-weight: normal;
+  }
+
+  .resume__tagline { font-family: var(--ff-sans-em); }
+
+  .resume__tagline em {
+    font-style: italic;
+    font-weight: bold;
+    font-family: var(--ff-serif-em);
+  }
+
+  .address {
+    position: fixed;
+    bottom: 0px;
+    z-index: 999;
+
+    display: flex;
+    width: 100%;
+    margin: 0px 0px 0px -5vw;
+    padding: 2vh 5vw 2vh calc(5vw + 25px);
+
+    background: #eee;
+    border-top: 1px solid silver;
+  }
+
+  .address dt { display: none; }
+
+  .address dd {
+    padding: 0px 25px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .resume__competencies { flex: 0 0 40%; }
+  .resume__languages    { flex: 0 0 35%; }
+  .resume__technologies { flex: 0 0 20%; }
+
+  aside h3 {
+    width: 1em; /* force word wrapping */
+    line-height: var(--base-leading);
+    margin-top: var(--base-leading);
+  }
+
+  .resume__languages ul { margin-left: -25px; }
+
+  .resume__languages li::before { content: ""; }
+
+  .resume__languages li {
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: left center;
+    padding-left: 25px;
+  }
+
+  li.language__clojure    { background-image: url("/icons/clojure.svg"); }
+  li.language__fsharp     { background-image: url("/icons/fsharp.svg"); }
+  li.language__ruby       { background-image: url("/icons/ruby.svg"); }
+  li.language__sql        { background-image: url("/icons/database.svg"); }
+  li.language__html       { background-image: url("/icons/html5.svg"); }
+  li.language__javascript { background-image: url("/icons/javascript.svg"); }
+
+  li.language__javascript,
+  li.language__ruby {
+    background-size: 12px 12px;
+    background-position: left 1px center;
+  }
+
+  .resume__job { margin-top: calc(2 * var(--base-leading)); }
+
+  .job__accomplishments li {
+    margin: calc(0.5 * var(--base-leading)) 0px;
+    max-width: 75ex;
+  }
+
+  .resume__extras {
+    display: flex;
+    margin-top: calc(8 * var(--base-leading));
+  }
+
+  .resume__education { flex: 1; }
+  .resume__interests { flex: 0 0 40%; }
+
+  .resume__interests { margin-left: 5em; }
+
+  .resume__interests h2 {
+    margin-bottom: var(--base-leading);
+  }
+
+  .resume__education p {
+    margin-bottom: var(--base-leading);
+    font-size: 0.8335em;
+  }
+}
