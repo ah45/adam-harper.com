@@ -206,4 +206,6 @@
     font-size: 1.337em;
     line-height: var(--base-leading);
   }
+
+  footer { display: none; }
 }

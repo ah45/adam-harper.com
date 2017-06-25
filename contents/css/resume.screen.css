@@ -10,6 +10,14 @@ html {
   --ff-sans-em:  'Lato', 'Helvetica', sans-serif;
 }
 
+@media screen and (max-width: 370px) {
+  html {
+    --base-font-size: 10pt;
+    --base-line-height: 27px;
+    --base-leading: var(--base-line-height);
+  }
+}
+
 *,
 h1, h2, h3, h4, h5, h6,
 p {
@@ -26,19 +34,11 @@ body {
 
 h1 { font-size: 3.375em; line-height: calc(var(--base-leading) * 3); }
 h2 { font-size: 2.250em; line-height: calc(var(--base-leading) * 2); }
-h3 {
-  font-size: 1.5em;
-  line-height: calc(var(--base-leading) * 1.25);
-  margin-bottom: calc(var(--base-leading) * 0.75);
-}
+h3 { font-size: 1.500em; line-height: calc(var(--base-leading) * 2); }
 
 h1, h2, h3 { font-family: var(--ff-sans-em); }
 
-h4,
-h5,
-h6,
-p,
-li {
+h4, h5, h6, p, li {
   font-size: var(--base-font-size);
   line-height: var(--base-leading);
 }
@@ -60,6 +60,8 @@ mark {
   color: #000;
   padding: 0px 0.2em;
 }
+
+.address dd { background-repeat: no-repeat; }
 
 dd.address__physical { background-image: url("/icons/globe.svg"); }
 dd.address__telephone { background-image: url("/icons/phone.svg"); }
@@ -93,11 +95,16 @@ dd.address__github { background-image: url("/icons/github.svg"); }
 }
 
 @media screen {
+  p, li { max-width: 75ex; }
+
   br { display: none; }
 
   ul { list-style: none; }
 
-  li { position: relative; }
+  li {
+    position: relative;
+    margin-left: 1em;
+  }
 
   li::before {
     display: block;
@@ -107,40 +114,24 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     content: "\0bb \020";
     color: #b4c2e4;
   }
-}
-
-@media screen {
-  body {
-    display: flex;
-    flex-flow: column nowrap;
-
-    margin: 5vh 5vw calc(10vh + 1em) 5vw;
-    min-height: 100vh;
-  }
-
-  header                   { order: 1; }
-  .resume__summary         { order: 2; }
-  .resume__work-experience { order: 4; }
-  aside                    { order: 3; }
-  .resume__extras          { order: 5; }
-
-  header { margin-top: 25vh; }
-  .resume__summary { height: 75vh; }
 
   header h1 {
     font-family: var(--ff-sans-em);
     text-align: center;
   }
 
-  .resume__example-roles,
-  .resume__tagline {
-    text-align: center;
+  aside h3 {
+    line-height: calc(var(--base-leading) * 1.25);
+    margin-top: calc(var(--base-leading) * 0.75);
   }
+
+  .resume__summary p { max-width: none; }
 
   .resume__example-roles {
     font-family: var(--ff-sans);
-    font-size: var(--base-font-size);
     font-weight: normal;
+    font-size: var(--base-font-size);
+    line-height: var(--base-leading);
   }
 
   .resume__tagline { font-family: var(--ff-sans-em); }
@@ -151,54 +142,66 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     font-family: var(--ff-serif-em);
   }
 
-  .address {
-    position: fixed;
-    bottom: 0px;
-    z-index: 999;
+  .resume__example-roles,
+  .resume__tagline {
+    text-align: center;
+  }
+}
 
+@media screen {
+  body {
     display: flex;
-    width: 100%;
-    margin: 0px 0px 0px -5vw;
-    padding: 2vh 5vw 2vh calc(5vw + 25px);
+    flex-flow: column nowrap;
 
-    background: #eee;
-    border-top: 1px solid silver;
+    margin: 5vh 5vw calc(10vh + 1em) 5vw;
+    min-height: 100vh;
+    max-width: 780px;
   }
 
-  .address dt { display: none; }
+  @media (min-width: 820px) {
+    body { margin-left: auto; margin-right: auto; }
+  }
+
+  header                   { order: 1; }
+  .resume__summary         { order: 2; }
+  .address                 { order: 3; }
+  .resume__work-experience { order: 5; }
+  aside                    { order: 4; }
+  .resume__extras          { order: 6; }
+  footer                   { order: 7; }
+
+  header {
+    margin-top: 5vh;
+  }
+
+  .address {
+    margin: var(--base-leading) 0px;
+  }
+
+  .address dt {
+    position: absolute;
+    left: -1000vw;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
 
   .address dd {
     padding: 0px 25px;
-    background-position: left center;
+    background-position: left top calc(0.25 * var(--base-leading));
     background-repeat: no-repeat;
     background-size: 16px auto;
   }
 
-  aside {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-  }
-
-  .resume__competencies { flex: 0 0 40%; }
-  .resume__languages    { flex: 0 0 35%; }
-  .resume__technologies { flex: 0 0 20%; }
-
-  aside h3 {
-    width: 1em; /* force word wrapping */
-    line-height: var(--base-leading);
-    margin-top: var(--base-leading);
-  }
-
-  .resume__languages ul { margin-left: -25px; }
-
   .resume__languages li::before { content: ""; }
 
   .resume__languages li {
+    margin-left: 0px;
+    padding-left: 25px;
+
     background-repeat: no-repeat;
     background-size: 15px 15px;
     background-position: left center;
-    padding-left: 25px;
   }
 
   li.language__clojure    { background-image: url("/icons/clojure.svg"); }
@@ -214,29 +217,94 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     background-position: left 1px center;
   }
 
-  .resume__job { margin-top: calc(2 * var(--base-leading)); }
+  .resume__work-experience h2 {
+    margin-top: calc(2 * var(--base-leading));
+  }
+
+  .resume__job { margin-bottom: calc(2 * var(--base-leading)); }
+
+  .job__period::after { content: ""; }
+
+  .job__period, .job__employer {
+    display: block;
+    margin: 0px;
+    line-height: var(--base-leading);
+  }
 
   .job__accomplishments li {
-    margin: calc(0.5 * var(--base-leading)) 0px;
-    max-width: 75ex;
+    margin-top: calc(0.5 * var(--base-leading));
+    margin-bottom: calc(0.5 * var(--base-leading));
   }
 
-  .resume__extras {
-    display: flex;
-    margin-top: calc(8 * var(--base-leading));
+  .resume__extras h2   { margin-top: var(--base-leading); }
+  .resume__education p { margin-bottom: var(--base-leading); }
+
+  footer {
+    margin-top: calc(2 * var(--base-leading));
+    border-top: 2px solid #d0d0d0;
   }
 
-  .resume__education { flex: 1; }
-  .resume__interests { flex: 0 0 40%; }
+  footer p {
+    margin-top: var(--base-leading);
+  }
 
-  .resume__interests { margin-left: 5em; }
+  footer .address  { display: block; }
+  footer .address dd.address__email { margin: 0px; }
+}
 
-  .resume__interests h2 {
+@media screen and (max-width: 370px) {
+  .resume__work-experience h2 {
+    line-height: var(--base-leading);
     margin-bottom: var(--base-leading);
   }
+}
+
+@media screen and (min-width: 765px) {
+  li { margin-left: 0px; }
+
+  .address, aside {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .address { margin-left: -25px; }
+
+  .address dd { display: block; padding-right: 0px; }
+
+  dd.address__physical  { flex: 0 0 36%;  order: 1; }
+  dd.address__telephone { flex: 0 0 30%;  order: 2; }
+  dd.address__github    { flex: 0 0 20%;  order: 3; }
+  dd.address__email     { flex: 0 0 auto; order: 4; }
+
+  dd.address__email {
+    margin: 0px auto 0px 39%;
+  }
+
+  aside li { margin-left: 0px; }
+
+  .resume__competencies { flex: 0 0 40%; }
+  .resume__languages    { flex: 0 0 35%; }
+  .resume__technologies { flex: 0 0 20%; }
+
+  aside h3 {
+    width: 1em; /* force word wrapping */
+    line-height: var(--base-leading);
+    margin-top: var(--base-leading);
+    margin-bottom: var(--base-leading);
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .resume__extras { display: flex; }
+
+  .resume__education { flex: 1; }
+  .resume__interests { flex: 0 0 42%; }
+
+  .resume__interests { margin-left: 5em; }
 
   .resume__education p {
     margin-bottom: var(--base-leading);
     font-size: 0.8335em;
+    width: 70ex;
   }
 }
