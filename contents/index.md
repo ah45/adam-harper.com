@@ -1,8 +1,4 @@
 ---
 title: adam-harper.com
-template: index.jade
+template: resume.jade
 ---
-
-## Hello there, you
-
-Boo!
