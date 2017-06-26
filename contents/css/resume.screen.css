@@ -1,5 +1,6 @@
 html {
   --body-text-color: #404040;
+  --body-background: #efefef;
   --base-font-size: 12pt;
   --base-line-height: 27px;
   --base-leading: var(--base-line-height);
