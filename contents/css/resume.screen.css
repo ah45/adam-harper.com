@@ -367,10 +367,18 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     right: 2vw;
     padding: 2px 6px;
 
-    color: #939393;
-
     font-size: 0.8335em;
     text-decoration: none;
+  }
+
+
+  .background__credit,
+  .background__credit:link,
+  .background__credit:visited,
+  .background__credit:hover,
+  .background__credit:active,
+  .background__credit:focus {
+    color: #f0f0f0;
   }
 
   .background__credit svg path { fill: #939393; }
@@ -383,6 +391,7 @@ dd.address__github { background-image: url("/icons/github.svg"); }
 
   .credit__attribution { text-indent: -1000vw; }
   .background__credit:hover .credit__attribution { text-indent: 0px; }
+  .background__credit:hover svg path { fill: #f0f0f0; }
 
   .background__overlay { background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); }
 
