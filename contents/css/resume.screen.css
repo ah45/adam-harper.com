@@ -404,7 +404,33 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   { color: #f0f0f0; }
 
   .resume__tagline em {
-    color: #54e4dc;
-    text-shadow: -1px 2px 0px #0e111b, 1px -1px 0px #f0f0f0, -2px -1px 0px #1d7583, 1px 2px 0px #308ac9;
+    padding: 0px calc(5px + 0.25em) 0px 5px;
+    color: rgba(0, 0, 0, 0);
+
+    text-shadow:
+      0px 0px 0 rgb(217,31,38)
+    , 1px 1px 0 rgb(226,91,14)
+    , 2px 2px 0 rgb(245,221,8)
+    , 3px 3px 0 rgb(5,148,68)
+    , 4px 4px 0 rgb(2,135,206)
+    , 5px 5px 0 rgb(4,77,145)
+    , 6px 6px 0 rgb(42,21,113)
+    ;
+
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .resume__tagline:hover em {
+    padding: 0px 5px 0px calc(5px + 0.25em);
+
+    text-shadow:
+       0px -0px 0 rgb(217,31,38)
+    , -1px -1px 0 rgb(226,91,14)
+    , -2px -2px 0 rgb(245,221,8)
+    , -3px -3px 0 rgb(5,148,68)
+    , -4px -4px 0 rgb(2,135,206)
+    , -5px -5px 0 rgb(4,77,145)
+    , -6px -6px 0 rgb(42,21,113)
+    ;
   }
 }
