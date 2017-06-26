@@ -342,17 +342,30 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen {
   header {
     height: calc(3 * var(--base-leading));
     margin-top: calc(40vh - (3 * var(--base-leading)));
   }
 
-  .resume__example-roles { height: calc(2 * var(--base-leading)); }
+  .resume__example-roles {
+    height: calc(2 * var(--base-leading));
+  }
 
   .resume__tagline {
     height: calc(3 * var(--base-leading));
-    margin-bottom: calc(60vh - (3 * var(--base-leading)));
+  }
+
+  .resume__summary p:last-of-type {
+    margin-top: calc(60vh - (7 * var(--base-leading)));
+  }
+
+  @media (max-width: 436px) {
+    header { height: calc(4 * var(--base-leading)); }
+
+    .resume__summary p:last-of-type {
+      margin-top: calc(60vh - (8 * var(--base-leading)));
+    }
   }
 
   footer .address { display: none; }
