@@ -260,6 +260,13 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   }
 }
 
+@media screen and (max-width: 436px) {
+  header h1 {
+    line-height: calc(var(--base-leading) * 2);
+    margin-bottom: var(--base-leading);
+  }
+}
+
 @media screen and (min-width: 765px) {
   li { margin-left: 0px; }
 
