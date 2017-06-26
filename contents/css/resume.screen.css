@@ -53,6 +53,8 @@ a:visited { color: #074d65; }
 a:hover, a:focus { color: #308ac9; }
 a:active { color: #54e3db; }
 
+.background { display: none; }
+
 .resume__tagline {
   margin-top: var(--base-leading);
   margin-bottom: var(--base-leading);
@@ -320,4 +322,75 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     font-size: 0.8335em;
     width: 70ex;
   }
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    height: calc(3 * var(--base-leading));
+    margin-top: calc(40vh - (3 * var(--base-leading)));
+  }
+
+  .resume__example-roles { height: calc(2 * var(--base-leading)); }
+
+  .resume__tagline {
+    height: calc(3 * var(--base-leading));
+    margin-bottom: calc(60vh - (3 * var(--base-leading)));
+  }
+
+  footer .address { display: none; }
+  .address { order: 9; }
+
+  .background--active { display: block; }
+
+  .background__image,
+  .background__overlay {
+    display: block;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+
+    background-size: auto 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: grayscale(0.6) brightness(0.6);
+  }
+
+  .background__overlay { filter: none; }
+
+  .background__credit {
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    padding: 2px 6px;
+
+    color: #939393;
+
+    font-size: 0.8335em;
+    text-decoration: none;
+  }
+
+  .background__credit svg path { fill: #939393; }
+
+  .credit__icon,
+  .credit__attribution {
+    display: inline-block;
+    padding: 2px 3px;
+  }
+
+  .credit__attribution { text-indent: -1000vw; }
+  .background__credit:hover .credit__attribution { text-indent: 0px; }
+
+  .background__overlay { background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); }
+
+  header,
+  .resume__example-roles,
+  .resume__tagline,
+  .resume__tagline em
+  { color: #f0f0f0; }
+
+  .resume__tagline em { color: #54e4dc; }
 }
