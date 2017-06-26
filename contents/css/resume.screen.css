@@ -353,7 +353,7 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     z-index: -1;
 
     background-size: cover;
-    background-position: top right;
+    background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     filter: grayscale(0.6) brightness(0.6);
