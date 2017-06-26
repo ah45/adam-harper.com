@@ -393,7 +393,9 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   .background__credit:hover .credit__attribution { text-indent: 0px; }
   .background__credit:hover svg path { fill: #f0f0f0; }
 
-  .background__overlay { background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); }
+  .background__overlay {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  }
 
   header,
   .resume__example-roles,
