@@ -19,6 +19,22 @@ html {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  html {
+    --base-font-size: 18pt;
+    --base-line-height: 40px;
+    --base-leading: var(--base-line-height);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    --base-font-size: 22pt;
+    --base-line-height: 50px;
+    --base-leading: var(--base-line-height);
+  }
+}
+
 *,
 h1, h2, h3, h4, h5, h6,
 p {
@@ -28,6 +44,7 @@ p {
 
 body {
   color: var(--body-text-color);
+  background-color: var(--body-background);
   font-size: var(--base-font-size);
   font-family: var(--ff-sans);
   line-height: var(--base-leading);
@@ -164,7 +181,7 @@ dd.address__github { background-image: url("/icons/github.svg"); }
 
     margin: 5vh 5vw calc(10vh + 1em) 5vw;
     min-height: 100vh;
-    max-width: 780px;
+    max-width: 50em;
   }
 
   @media (min-width: 820px) {
