@@ -392,5 +392,8 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   .resume__tagline em
   { color: #f0f0f0; }
 
-  .resume__tagline em { color: #54e4dc; }
+  .resume__tagline em {
+    color: #54e4dc;
+    text-shadow: -1px 2px 0px #0e111b, 1px -1px 0px #f0f0f0, -2px -1px 0px #1d7583, 1px 2px 0px #308ac9;
+  }
 }
