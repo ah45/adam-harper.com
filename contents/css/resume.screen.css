@@ -48,6 +48,11 @@ mark {
   color: var(--body-text-color);
 }
 
+a:link { color: #1d7583; }
+a:visited { color: #074d65; }
+a:hover, a:focus { color: #308ac9; }
+a:active { color: #54e3db; }
+
 .resume__tagline {
   margin-top: var(--base-leading);
   margin-bottom: var(--base-leading);
