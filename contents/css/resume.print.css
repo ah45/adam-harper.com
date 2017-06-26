@@ -99,11 +99,13 @@
   .resume__tagline {
     font-family: var(--ff-serif-em);
     font-style: italic;
+    font-weight: 600;
   }
 
   .resume__tagline em {
     font-family: var(--ff-sans-em);
     font-style: normal;
+    font-weight: normal;
   }
 
   .resume__example-roles {

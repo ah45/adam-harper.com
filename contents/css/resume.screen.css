@@ -4,9 +4,9 @@ html {
   --base-line-height: 27px;
   --base-leading: var(--base-line-height);
 
-  --ff-serif: 'Garamond', serif;
-  --ff-sans:  'Gill Sans', 'Gill Sans MT', sans-serif;
-  --ff-serif-em: 'Cambria', serif;
+  --ff-serif: 'Garamond', 'Baskerville', serif;
+  --ff-sans:  'Gill Sans', 'Gill Sans MT', 'Calibri', sans-serif;
+  --ff-serif-em: 'Cormorant Garamond', 'Cambria', serif;
   --ff-sans-em:  'Lato', 'Helvetica', sans-serif;
 }
 
@@ -116,7 +116,7 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   }
 
   header h1 {
-    font-family: var(--ff-sans-em);
+    font-family: 'Libre Baskerville', var(--ff-sans-em);
     text-align: center;
   }
 
@@ -137,8 +137,9 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   .resume__tagline { font-family: var(--ff-sans-em); }
 
   .resume__tagline em {
+    font-size: 1.442em;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 600;
     font-family: var(--ff-serif-em);
   }
 
