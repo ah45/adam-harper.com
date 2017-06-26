@@ -352,7 +352,7 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     right: 0px;
     z-index: -1;
 
-    background-size: auto 100%;
+    background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
     background-attachment: fixed;
