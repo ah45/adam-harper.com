@@ -248,7 +248,7 @@ html(lang='en')
 
      window.onscroll = function () {
       if (window.pageYOffset > 0) {
-        var opacity = window.pageYOffset / summaryTop;
+        var opacity = 0.15 + (window.pageYOffset / summaryTop);
         var gradientStep = "rgba(255, 255, 255, " + opacity + ")";
         var gradientSteps = gradientStep + "," + gradientStep;
 
