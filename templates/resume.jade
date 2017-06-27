@@ -242,8 +242,10 @@ html(lang='en')
            span.url__path /ah45
 
    script(type="text/javascript").
+     var header = document.getElementsByTagName("header")[0];
      var background = document.getElementsByClassName("background")[0];
 
+     header.className += " header--invert";
      background.className += " background--active";
 
      var bgOverlay = background.querySelector(".background__overlay");
