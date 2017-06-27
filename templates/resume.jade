@@ -23,24 +23,6 @@ html(lang='en')
     header
       h1 Adam Harper
 
-    dl.address
-     dt.address__physical Address
-     dd.address__physical Southampton, United Kingdom
-
-     dt.address__telephone Contact Number
-     dd.address__telephone +44 (0) 7597 265740
-
-     dt.address__email Email
-     dd.address__email
-       a(href="mailto:hire@adam-harper.com") hire@adam-harper.com
-
-     dt.address__github Github
-     dd.address__github
-       a(href="https://github.com/ah45")
-        span.url__domain github.com
-        span.url__path /ah45
-
-    section.resume__summary
       h2.resume__example-roles.
         Software Engineer,
         Data Analyst,
@@ -51,14 +33,35 @@ html(lang='en')
         Experienced developer of <em>creative solutions</em>
         under challenging and constrained conditions.
 
-      p.
-        Highly self-motivated and pro-active,
-        with over 10 years of full-stack software development experience
-        and more than 15 years working with and managing all aspects of IT.
-        Skilled at seeing the bigger picture and identifying unmet needs.
-        Excellent project management skills and ability to work flexibly.
-        Adept at working in mixed teams,
-        always looking to share, teach, and learn with others.
+      dl.address
+       dt.address__physical Address
+       dd.address__physical
+         span.address__city
+           | Southampton
+           span.seperator= ", "
+         span.address__country United Kingdom
+
+       dt.address__telephone Contact Number
+       dd.address__telephone +44 (0) 7597 265740
+
+       dt.address__email Email
+       dd.address__email
+         a(href="mailto:hire@adam-harper.com") hire@adam-harper.com
+
+       dt.address__github Github
+       dd.address__github
+         a(href="https://github.com/ah45")
+          span.url__domain github.com
+          span.url__path /ah45
+
+    p.resume__summary.
+      Highly self-motivated and pro-active,
+      with over 10 years of full-stack software development experience
+      and more than 15 years working with and managing all aspects of IT.
+      Skilled at seeing the bigger picture and identifying unmet needs.
+      Excellent project management skills and ability to work flexibly.
+      Adept at working in mixed teams,
+      always looking to share, teach, and learn with others.
 
     aside
       section.resume__competencies
@@ -244,7 +247,7 @@ html(lang='en')
      background.className += " background--active";
 
      var bgOverlay = background.querySelector(".background__overlay");
-     var summaryTop = document.querySelector(".resume__summary p:last-of-type").offsetTop;
+     var summaryTop = document.querySelector(".resume__summary").offsetTop;
 
      window.onscroll = function () {
       if (window.pageYOffset > 0) {

@@ -86,12 +86,25 @@ a:active { color: #54e3db; }
   padding: 0px 0.2em;
 }
 
-.address dd { background-repeat: no-repeat; }
+.address dd:before {
+  content: "";
 
-dd.address__physical { background-image: url("/icons/globe.svg"); }
-dd.address__telephone { background-image: url("/icons/phone.svg"); }
-dd.address__email { background-image: url("/icons/email.svg"); }
-dd.address__github { background-image: url("/icons/github.svg"); }
+  display: inline-block;
+  height: var(--base-leading);
+  width: 25px;
+
+  position: relative;
+  top: calc(0.1 * var(--base-leading));
+
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+}
+
+dd.address__physical:before { background-image: url("/icons/globe.svg"); }
+dd.address__telephone:before { background-image: url("/icons/phone.svg"); }
+dd.address__email:before { background-image: url("/icons/email.svg"); }
+dd.address__github:before { background-image: url("/icons/github.svg"); }
 
 .resume__job { margin-bottom: var(--base-leading); }
 
@@ -150,8 +163,6 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     margin-top: calc(var(--base-leading) * 0.75);
   }
 
-  .resume__summary p { max-width: none; }
-
   .resume__example-roles {
     font-family: var(--ff-sans);
     font-weight: normal;
@@ -172,6 +183,11 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   .resume__tagline {
     text-align: center;
   }
+
+  .resume__summary {
+    margin-bottom: calc(2 * var(--base-leading));
+    max-width: none;
+  }
 }
 
 @media screen {
@@ -190,18 +206,17 @@ dd.address__github { background-image: url("/icons/github.svg"); }
 
   header                   { order: 1; }
   .resume__summary         { order: 2; }
-  .address                 { order: 3; }
-  .resume__work-experience { order: 5; }
-  aside                    { order: 4; }
-  .resume__extras          { order: 6; }
-  footer                   { order: 7; }
+  aside                    { order: 3; }
+  .resume__work-experience { order: 4; }
+  .resume__extras          { order: 5; }
+  footer                   { order: 6; }
 
   header {
     margin-top: 5vh;
   }
 
   .address {
-    margin: var(--base-leading) 0px;
+    margin: 0px 0px var(--base-leading) 0px;
   }
 
   .address dt {
@@ -210,13 +225,6 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-
-  .address dd {
-    padding: 0px 25px;
-    background-position: left top calc(0.25 * var(--base-leading));
-    background-repeat: no-repeat;
-    background-size: 16px auto;
   }
 
   .resume__languages li::before { content: ""; }
@@ -274,8 +282,10 @@ dd.address__github { background-image: url("/icons/github.svg"); }
     margin-top: var(--base-leading);
   }
 
-  footer .address  { display: block; }
-  footer .address dd.address__email { margin: 0px; }
+  footer .address  {
+    display: block;
+    margin-top: var(--base-leading);
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -292,25 +302,47 @@ dd.address__github { background-image: url("/icons/github.svg"); }
   }
 }
 
+@media screen and (min-width: 436px) {
+  header .address {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  header .address dd { display: block; padding-right: 0px; }
+
+  header .address__city {
+    position: absolute;
+    left: -1000vw;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  header dd.address__github    { flex: 0 0 35%;  order: 1; }
+  header dd.address__telephone { flex: 0 0 35%;  order: 2; }
+  header dd.address__physical  { flex: 0 0 30%;  order: 3; }
+  header dd.address__email     { flex: 0 0 auto; order: 4; }
+
+  header dd.address__email     { margin: 0px auto 0px 35%; }
+
+  header dd.address__physical  { text-align: right; }
+}
+
+@media screen and (min-height: 736px) {
+  header .address { margin-top: calc(2 * var(--base-leading)); }
+}
+
 @media screen and (min-width: 765px) {
   li { margin-left: 0px; }
 
-  .address, aside {
+  aside {
     display: flex;
     flex-flow: row wrap;
-  }
-
-  .address { margin-left: -25px; }
-
-  .address dd { display: block; padding-right: 0px; }
-
-  dd.address__physical  { flex: 0 0 36%;  order: 1; }
-  dd.address__telephone { flex: 0 0 30%;  order: 2; }
-  dd.address__github    { flex: 0 0 20%;  order: 3; }
-  dd.address__email     { flex: 0 0 auto; order: 4; }
-
-  dd.address__email {
-    margin: 0px auto 0px 39%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: var(--base-leading);
   }
 
   aside li { margin-left: 0px; }
@@ -344,32 +376,14 @@ dd.address__github { background-image: url("/icons/github.svg"); }
 
 @media screen {
   header {
-    height: calc(3 * var(--base-leading));
-    margin-top: calc(40vh - (3 * var(--base-leading)));
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0px 0px;
   }
-
-  .resume__example-roles {
-    height: calc(2 * var(--base-leading));
-  }
-
-  .resume__tagline {
-    height: calc(3 * var(--base-leading));
-  }
-
-  .resume__summary p:last-of-type {
-    margin-top: calc(60vh - (7 * var(--base-leading)));
-  }
-
-  @media (max-width: 436px) {
-    header { height: calc(4 * var(--base-leading)); }
-
-    .resume__summary p:last-of-type {
-      margin-top: calc(60vh - (8 * var(--base-leading)));
-    }
-  }
-
-  footer .address { display: none; }
-  .address { order: 9; }
 
   .background--active { display: block; }
 
