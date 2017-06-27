@@ -1,6 +1,6 @@
 html {
   --body-text-color: #404040;
-  --body-background: #efefef;
+  --body-background: #f5f5f5;
   --base-font-size: 12pt;
   --base-line-height: 27px;
   --base-leading: var(--base-line-height);
@@ -439,7 +439,7 @@ dd.address__github:before { background-image: url("/icons/github.svg"); }
   .background__credit:hover svg path { fill: #f0f0f0; }
 
   .background__overlay {
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(245, 245, 245, 0), rgba(245, 245, 245, 0));
   }
 
   header,
