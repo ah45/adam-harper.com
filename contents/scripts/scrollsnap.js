@@ -87,7 +87,7 @@ function handleScroll () {
   var trigger;
 
   document.addEventListener('keydown', function (e) { trigger = e; });
-  document.addEventListener('mousewheel', function (e) { trigger = e; });
+  document.addEventListener('wheel', function (e) { trigger = e; });
   document.addEventListener('swipe', function (e) { trigger = e; });
 
   return function (e) {
