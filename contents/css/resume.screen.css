@@ -124,7 +124,7 @@
     z-index: 1;
   }
 
-  .resume__summary { z-index: 1; }
+  .resume__summary, aside { z-index: 1; }
 
   .address {
     margin: 0px 0px var(--base-leading) 0px;
