@@ -17,5 +17,9 @@
   "markdown": {
     "smartLists": true,
     "smartypants": true
-  }
+  },
+  "revision": [
+    "css/*.css",
+    "scripts/*.js"
+  ]
 }
