@@ -239,6 +239,24 @@
   .credit__attribution { text-indent: -1000vw; }
   .splash__credit:hover .credit__attribution { text-indent: 0px; }
   .splash__credit:hover svg path { fill: #f0f0f0; }
+
+  .splash__skip, .splash__show {
+    display: block;
+    position: absolute;
+    bottom: 50vh;
+    left: 0px;
+    width: 100vw;
+
+    color: var(--body-neg-text-color);
+
+    font-size: calc(0.75 * var(--base-font-size));
+    line-height: calc(1.5 * var(--base-leading));
+    text-align: center;
+  }
+
+  .splash__show {
+    bottom: calc(50vh - (2.5 * var(--base-leading)));
+  }
 }
 
 /*
