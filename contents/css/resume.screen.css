@@ -259,6 +259,7 @@
   }
 
   .splash__show {
+    display: none;
     bottom: calc(50vh - (2.5 * var(--base-leading)));
   }
 }
