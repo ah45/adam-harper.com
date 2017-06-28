@@ -5,7 +5,8 @@
     "owner": "Adam Harper"
   },
   "plugins": [
-    "wintersmith-livereload"
+    "wintersmith-livereload",
+    "wintersmith-revision"
   ],
   "livereload": {
     "port": 32579
