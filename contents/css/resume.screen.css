@@ -199,6 +199,12 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    background-image:
+      url(/imgs/tran-mau-tri-tam-50424.hires.jpg)
+    , url(/imgs/tran-mau-tri-tam-50424.800.blurred.jpg)
+    ;
+
     filter: grayscale(0.6) brightness(0.3) contrast(0.8);
   }
 
