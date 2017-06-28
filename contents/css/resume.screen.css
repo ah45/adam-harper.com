@@ -363,10 +363,8 @@ dd.address__github:before { background-image: url("/icons/github.svg"); }
 @media screen and (min-width: 820px) {
   .resume__extras { display: flex; }
 
-  .resume__education { flex: 1; }
-  .resume__interests { flex: 0 0 42%; }
-
-  .resume__interests { margin-left: 5em; }
+  .resume__education { flex: 1; margin-right: 3em; }
+  .resume__interests { flex: 1; }
 
   .resume__education p {
     margin-bottom: var(--base-leading);
