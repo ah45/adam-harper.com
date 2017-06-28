@@ -195,7 +195,7 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: grayscale(0.6) brightness(0.6);
+    filter: grayscale(0.6) brightness(0.3) contrast(0.8);
   }
 
   .background__overlay {
