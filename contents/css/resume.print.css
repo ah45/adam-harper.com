@@ -148,17 +148,10 @@
   .resume__job:nth-of-type(2) { page-break-before: always; }
 
   .resume__languages li {
-    background-repeat: no-repeat;
-    background-position: center right;
+    padding-left: 0px;
     background-size: 20px 20px;
+    background-position: center right;
   }
-
-  li.language__clojure { background-image: url("/icons/clojure.svg"); }
-  li.language__fsharp  { background-image: url("/icons/fsharp.svg"); }
-  li.language__ruby    { background-image: url("/icons/ruby.svg"); }
-  li.language__sql     { background-image: url("/icons/database.svg"); }
-  li.language__html    { background-image: url("/icons/html5.svg"); }
-  li.language__javascript { background-image: url("/icons/javascript.svg"); }
 
   li.language__javascript,
   li.language__ruby {
