@@ -252,7 +252,7 @@
   .header--invert a:focus { color: #54e3db; }
   .header--invert a:active { color: #1d7583; }
 
-  .header--invert dd:before { filter: invert(1); }
+  .header--invert dd:before { filter: invert(1) brightness(0.88); }
 }
 
 
