@@ -175,14 +175,21 @@
  * Background styling
  */
 @media screen {
-  .background__image {
-    display: block;
+  .background {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 150vh;
-    z-index: -2;
+
+    z-index: -1;
+
+    background-color: #353535;
+  }
+
+  .background__image {
+    width: 100%;
+    height: 100%;
 
     background-size: cover;
     background-position: top center;
@@ -198,7 +205,6 @@
     left: 0px;
     width: 100vw;
     height: 50vh;
-    z-index: -1;
 
     background-image: linear-gradient(rgba(245, 245, 245, 0), rgba(245, 245, 245, 1));
   }
