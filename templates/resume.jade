@@ -241,22 +241,4 @@ html(lang='en')
            span.url__domain github.com
            span.url__path /ah45
 
-   script(type="text/javascript").
-     var header = document.getElementsByTagName("header")[0];
-     var background = document.getElementsByClassName("background")[0];
-
-     header.className += " header--invert";
-     background.className += " background--active";
-
-     var bgOverlay = background.querySelector(".background__overlay");
-     var summaryTop = document.querySelector(".resume__summary").offsetTop;
-
-     window.onscroll = function () {
-      if (window.pageYOffset > 0) {
-        var opacity = window.pageYOffset / summaryTop;
-        var gradientStep = "rgba(245, 245, 245, " + opacity + ")";
-        var gradientSteps = gradientStep + "," + gradientStep;
-
-        bgOverlay.style.background = "linear-gradient(" + gradientSteps + ")";
-      }
-     }
+  script(type="text/javascript", src="/scripts/scrollsnap.js")

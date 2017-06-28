@@ -389,11 +389,11 @@ dd.address__github:before { background-image: url("/icons/github.svg"); }
   .background__image,
   .background__overlay {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    bottom: 0px;
     left: 0px;
-    right: 0px;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 
     background-size: cover;
