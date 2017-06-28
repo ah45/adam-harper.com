@@ -186,7 +186,7 @@ dd.address__github:before { background-image: url("/icons/github.svg"); }
   }
 
   .resume__summary {
-    margin-bottom: calc(2 * var(--base-leading));
+    margin: calc(4 * var(--base-leading)) 0px var(--base-leading) 0px;
     max-width: none;
   }
 }
