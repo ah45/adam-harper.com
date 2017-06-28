@@ -1,3 +1,49 @@
+/*
+ * Animation
+ */
+
+
+// credit: https://www.kirupa.com/html5/animating_with_easing_functions_in_javascript.htm
+function easeOutCubic(currentIteration, startValue, changeInValue, totalIterations) {
+  var stepMultiplier = 1 + Math.pow(currentIteration / totalIterations - 1, 3);
+  return startValue + (changeInValue * stepMultiplier);
+}
+
+function easeScroll(fromYPosition, toYPosition) {
+  var scrollInProgress = true;
+  var i = 0;
+
+  var direction = (fromYPosition > toYPosition) ? 'up' : 'down';
+  var distance = Math.abs(fromYPosition - toYPosition);
+
+  var animateScroll = function () {
+    if (scrollInProgress) {
+      var delta = easeOutCubic(i, 0, distance, 75);
+      var newPosition = fromYPosition + (direction == 'up' ? -delta : delta);
+
+      console.log(['scrolling', i, newPosition, fromYPosition, toYPosition]);
+
+      window.scrollTo(0, newPosition);
+      i = i + 1;
+
+      if (window.pageYOffset == toYPosition) {
+        scrollInProgress = false;
+      }
+      else {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+  }
+
+  requestAnimationFrame(animateScroll);
+}
+
+
+/*
+ * Event handling
+ */
+
+
 var KeyPageUp   = 33;
 var KeyPageDown = 34;
 var KeyUp       = 38;
@@ -80,11 +126,12 @@ function headerHeight () {
   return el.offsetTop + el.clientHeight;
 }
 
-function scrollToTop     (e) { e.preventDefault(); window.scrollTo(0, 0); }
-function scrollToSummary (e) { e.preventDefault(); window.scrollTo(0, headerHeight()); }
+function scrollToTop     (e) { e.preventDefault(); easeScroll(window.pageYOffset, 0); }
+function scrollToSummary (e) { e.preventDefault(); easeScroll(window.pageYOffset, headerHeight()); }
 
 function handleScroll () {
   var trigger;
+  var easing = new Event('easing');
 
   document.addEventListener('keydown', function (e) { trigger = e; });
   document.addEventListener('wheel', function (e) { trigger = e; });
@@ -93,13 +140,16 @@ function handleScroll () {
   return function (e) {
     var offset = window.pageYOffset;
     var summaryOffset = headerHeight();
+    var scrollOverride;
 
     console.log(['scrolled to ' + offset, trigger, summaryOffset]);
+
+    if (trigger == easing) { return; }
 
     if (offset == 0) {
       if (isMoveDown(trigger)) {
         console.log('to the summary!');
-        scrollToSummary(e);
+        scrollOverride = scrollToSummary
       }
       else {
         console.log('there\'s nowhere to go');
@@ -108,7 +158,7 @@ function handleScroll () {
     else if (offset == summaryOffset) {
       if (isMoveUp(trigger)) {
         console.log('to the top!');
-        scrollToTop(e);
+        scrollOverride = scrollToTop;
       }
       else {
         console.log('carry on down');
@@ -116,10 +166,15 @@ function handleScroll () {
     }
     else if (offset < summaryOffset) {
       console.log('back to the summary with you');
-      scrollToSummary(e);
+      scrollOverride = scrollToSummary;
     }
     else {
       console.log('all good');
+    }
+
+    if (scrollOverride !== undefined) {
+      trigger = easing;
+      scrollOverride(e);
     }
   }
 }
