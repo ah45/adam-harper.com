@@ -203,7 +203,6 @@
     text-decoration: none;
   }
 
-
   .background__credit,
   .background__credit:link,
   .background__credit:visited,
@@ -238,7 +237,14 @@
   .header--invert a:active { color: #1d7583; }
 
   .header--invert dd:before { filter: invert(1); }
+}
 
+
+
+/*
+ * Make the tagline emphasis all fancy
+ */
+@media screen {
   .resume__tagline em {
     padding: 0px 0.25em 0px 0.15em;
     color: rgba(0, 0, 0, 0);
