@@ -192,5 +192,5 @@
     line-height: var(--base-leading);
   }
 
-  .background, footer { display: none; }
+  .splash, footer { display: none; }
 }
