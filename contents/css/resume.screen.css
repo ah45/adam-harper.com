@@ -1,3 +1,5 @@
+@import url('./resume.animations.css');
+
 /*
  * Font sizing
  */
@@ -256,6 +258,12 @@
     font-size: calc(0.75 * var(--base-font-size));
     line-height: calc(1.5 * var(--base-leading));
     text-align: center;
+
+    animation-name: splash-arrow-bounce;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
   }
 
   .splash__show {
