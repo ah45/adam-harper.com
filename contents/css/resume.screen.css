@@ -177,8 +177,7 @@
 @media screen {
   .background--active { display: block; }
 
-  .background__image,
-  .background__overlay {
+  .background__image {
     display: block;
     position: absolute;
     top: 0px;
@@ -193,8 +192,6 @@
     background-attachment: fixed;
     filter: grayscale(0.6) brightness(0.6);
   }
-
-  .background__overlay { filter: none; }
 
   .background__credit {
     position: absolute;
@@ -227,10 +224,6 @@
   .credit__attribution { text-indent: -1000vw; }
   .background__credit:hover .credit__attribution { text-indent: 0px; }
   .background__credit:hover svg path { fill: #f0f0f0; }
-
-  .background__overlay {
-    background: linear-gradient(rgba(245, 245, 245, 0), rgba(245, 245, 245, 0));
-  }
 }
 
 /*
