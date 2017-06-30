@@ -76,10 +76,10 @@ a:active { color: #54e3db; }
   background-size: 16px auto;
 }
 
-dd.address__physical:before { background-image: url("/icons/globe.svg"); }
-dd.address__telephone:before { background-image: url("/icons/phone.svg"); }
-dd.address__email:before { background-image: url("/icons/email.svg"); }
-dd.address__github:before { background-image: url("/icons/github.svg"); }
+dd.address__physical:before { background-image: url("../icons/globe.svg"); }
+dd.address__telephone:before { background-image: url("../icons/phone.svg"); }
+dd.address__email:before { background-image: url("../icons/email.svg"); }
+dd.address__github:before { background-image: url("../icons/github.svg"); }
 
 .resume__languages li::before { content: ""; }
 
@@ -92,12 +92,12 @@ dd.address__github:before { background-image: url("/icons/github.svg"); }
   background-position: left center;
 }
 
-li.language__clojure    { background-image: url("/icons/clojure.svg"); }
-li.language__fsharp     { background-image: url("/icons/fsharp.svg"); }
-li.language__ruby       { background-image: url("/icons/ruby.svg"); }
-li.language__sql        { background-image: url("/icons/database.svg"); }
-li.language__html       { background-image: url("/icons/html5.svg"); }
-li.language__javascript { background-image: url("/icons/javascript.svg"); }
+li.language__clojure    { background-image: url("../icons/clojure.svg"); }
+li.language__fsharp     { background-image: url("../icons/fsharp.svg"); }
+li.language__ruby       { background-image: url("../icons/ruby.svg"); }
+li.language__sql        { background-image: url("../icons/database.svg"); }
+li.language__html       { background-image: url("../icons/html5.svg"); }
+li.language__javascript { background-image: url("../icons/javascript.svg"); }
 
 li.language__javascript,
 li.language__ruby {

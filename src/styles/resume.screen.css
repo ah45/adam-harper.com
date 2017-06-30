@@ -221,8 +221,8 @@
     background-attachment: fixed;
 
     background-image:
-      url(/imgs/tran-mau-tri-tam-50424.hires.jpg)
-    , url(/imgs/tran-mau-tri-tam-50424.800.blurred.jpg)
+      url(../images/tran-mau-tri-tam-50424.hires.jpg)
+    , url(../images/tran-mau-tri-tam-50424.800.blurred.jpg)
     ;
 
     filter: grayscale(0.6) brightness(0.3) contrast(0.8);
