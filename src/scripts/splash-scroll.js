@@ -21,8 +21,6 @@ function easeScroll(fromYPosition, toYPosition) {
       var delta = easeOutCubic(i, 0, distance, 75);
       var newPosition = fromYPosition + (direction == 'up' ? -delta : delta);
 
-      console.log(['scrolling', i, newPosition, fromYPosition, toYPosition]);
-
       window.scrollTo(0, newPosition);
       i = i + 1;
 
@@ -71,7 +69,7 @@ function addSplashSkipoverHandling () {
   });
 
   document.addEventListener('scroll', function () {
-    return function (e) {
+    return function () {
       var position = window.pageYOffset;
       var cutover  = 0.5 * headerHeight();
 
