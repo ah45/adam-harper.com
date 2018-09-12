@@ -77,6 +77,13 @@ gulp.task('images', function () {
 });
 
 
+gulp.task('well-known', function () {
+  return gulp.src('./src/well-known/**/*', { base: './src/well-known' })
+    .pipe(gulp.dest(BUILD_DIR + '/.well-known/'))
+  ;
+});
+
+
 gulp.task('js', function () {
   return gulp.src('./src/scripts/**/*.js', { base: './src' })
     .pipe(eslint())
@@ -140,13 +147,15 @@ gulp.task('watch', function () {
       './src/pages/**/*',
       './src/scripts/**/*',
       './src/styles/**/*',
-      './src/images/**/*'
+      './src/images/**/*',
+      './src/well-known/**/*'
     ],
     [
       'pages',
       'js',
       'css',
-      'images'
+      'images',
+      'well-known'
     ]
   );
 });
@@ -154,7 +163,7 @@ gulp.task('watch', function () {
 
 gulp.task('build', sequence(
   'clean',
-  ['assets:build', 'pages'],
+  ['assets:build', 'pages', 'well-known'],
   'assets:tag',
   'assets:replace'
 ));
@@ -162,6 +171,6 @@ gulp.task('build', sequence(
 
 gulp.task('preview', sequence(
   'clean',
-  ['assets:build', 'pages'],
+  ['assets:build', 'pages', 'well-known'],
   ['serve', 'watch']
 ));
