@@ -1,3 +1,4 @@
+var fs = require('fs');
 var gulp = require('gulp');
 
 // utilities
@@ -103,6 +104,11 @@ gulp.task('pages', function () {
 });
 
 
+gulp.task('nojekyll', function (cb) {
+  fs.writeFile(BUILD_DIR + '/.nojekyll', 'contents', cb);
+});
+
+
 
 /*
  * Asset management
@@ -165,12 +171,14 @@ gulp.task('build', sequence(
   'clean',
   ['assets:build', 'pages', 'well-known'],
   'assets:tag',
-  'assets:replace'
+  'assets:replace',
+  'nojekyll'
 ));
 
 
 gulp.task('preview', sequence(
   'clean',
   ['assets:build', 'pages', 'well-known'],
+  'nojekyll',
   ['serve', 'watch']
 ));
