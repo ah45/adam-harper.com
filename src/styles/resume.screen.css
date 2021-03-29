@@ -131,7 +131,7 @@
   .resume__work-experience { order: 4; }
   .resume__extras          { order: 5; }
   footer                   { order: 6; }
-
+https://adam-harper.com
   header {
     display: flex;
     flex-flow: column nowrap;
@@ -209,6 +209,8 @@
     height: 150vh;
 
     background-color: #353535;
+
+    z-index: -1;
   }
 
   .splash__image {
