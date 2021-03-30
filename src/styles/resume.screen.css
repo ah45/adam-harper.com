@@ -317,30 +317,16 @@
 
 
 /*
- * Make the tagline emphasis all fancy
+ * Make the tagline emphasis stand out
  */
 @media screen {
   .resume__tagline em {
-    padding: 0px 0.25em 0px 0.15em;
+    padding: 0.15em 0.25em 0px 0.15em;
     color: transparent;
 
     text-shadow:
       0px 0px 0 #e0e0e0
     , 2px 3px 0 #404040
-    ;
-
-    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-
-  .resume__tagline:hover em {
-    text-shadow:
-      0px 0px 0 rgb(217,31,38)
-    , 1px 1px 0 rgb(226,91,14)
-    , 2px 2px 0 rgb(245,221,8)
-    , 3px 3px 0 rgb(5,148,68)
-    , 4px 4px 0 rgb(2,135,206)
-    , 5px 5px 0 rgb(4,77,145)
-    , 6px 6px 0 rgb(42,21,113)
     ;
   }
 }
