@@ -83,6 +83,11 @@ gulp.task('well-known', function () {
   ;
 });
 
+gulp.task('cname', function () {
+  return gulp.src('./src/CNAME', { base: './src' })
+    .pipe(gulp.dest(BUILD_DIR + '/'))
+  ;
+});
 
 gulp.task('js', function () {
   return gulp.src('./src/scripts/**/*.js', { base: './src' })
@@ -158,7 +163,7 @@ gulp.task('watch', function () {
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('assets:build', 'pages', 'well-known'),
+  gulp.parallel('assets:build', 'pages', 'well-known', 'cname'),
   'assets:tag',
   'assets:replace',
   'nojekyll'
