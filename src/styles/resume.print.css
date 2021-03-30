@@ -200,6 +200,7 @@
 
   /* page breaks */
   .resume__job:nth-of-type(1) .job__period:nth-of-type(3),
-  .resume__extras { page-break-before: always; }
+  .resume__job:nth-of-type(2)
+  { page-break-before: always; }
 }
 
