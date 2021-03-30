@@ -138,6 +138,7 @@
     line-height: var(--base-leading);
   }
 
+  .job__period { display: block; }
   .job__accomplishments {
     list-style: disc;
   }
