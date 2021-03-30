@@ -59,11 +59,8 @@
     display: block;
     position: absolute;
     top: calc(var(--base-leading) * 3.4);
-    left: 50px;
+    left: 25px;
   }
-
-  .address__github .url__domain { display: none; }
-  .address__github .url__path { margin-left: -1mm; }
 
   header {
     margin: calc(var(--base-leading) * 1) 0px;
