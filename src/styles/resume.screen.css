@@ -131,7 +131,7 @@
   .resume__work-experience { order: 4; }
   .resume__extras          { order: 5; }
   footer                   { order: 6; }
-https://adam-harper.com
+
   header {
     display: flex;
     flex-flow: column nowrap;
