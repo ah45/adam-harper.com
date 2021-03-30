@@ -4,7 +4,6 @@ var gulp = require('gulp');
 // utilities
 var del = require('del');
 var filter = require('gulp-filter');
-var sequence = require('gulp-sequence');
 
 // local preview
 var browserSync = require('browser-sync').create();
@@ -115,7 +114,7 @@ gulp.task('nojekyll', function (cb) {
  */
 
 
-gulp.task('assets:build', ['css', 'images', 'js']);
+gulp.task('assets:build', gulp.series('css', 'images', 'js'));
 
 
 gulp.task('assets:tag', function () {
@@ -148,37 +147,27 @@ gulp.task('assets:replace', function () {
 
 
 gulp.task('watch', function () {
-  gulp.watch(
-    [
-      './src/pages/**/*',
-      './src/scripts/**/*',
-      './src/styles/**/*',
-      './src/images/**/*',
-      './src/well-known/**/*'
-    ],
-    [
-      'pages',
-      'js',
-      'css',
-      'images',
-      'well-known'
-    ]
-  );
+  gulp.watch('./src/pages/**/*', gulp.series('pages'));
+  gulp.watch('./src/scripts/**/*', gulp.series('js'));
+  gulp.watch('./src/css/**/*', gulp.series('css'));
+  gulp.watch('./src/images/**/*', gulp.series('images'));
+  gulp.watch('./src/well-known/**/*', gulp.series('well-known'));
+  return;
 });
 
 
-gulp.task('build', sequence(
+gulp.task('build', gulp.series(
   'clean',
-  ['assets:build', 'pages', 'well-known'],
+  gulp.parallel('assets:build', 'pages', 'well-known'),
   'assets:tag',
   'assets:replace',
   'nojekyll'
 ));
 
 
-gulp.task('preview', sequence(
+gulp.task('preview', gulp.series(
   'clean',
-  ['assets:build', 'pages', 'well-known'],
+  gulp.parallel('assets:build', 'pages', 'well-known'),
   'nojekyll',
-  ['serve', 'watch']
+  gulp.parallel('serve', 'watch')
 ));
