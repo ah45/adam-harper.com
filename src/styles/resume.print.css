@@ -139,6 +139,8 @@
   }
 
   .job__period { display: block; }
+  .job__period::after { content: ""; }
+
   .job__accomplishments {
     list-style: disc;
   }
