@@ -57,8 +57,8 @@ a:active { color: #54e3db; }
 }
 
 .resume__tagline em {
+  display: block;
   color: #000;
-  padding: 0px 0.2em;
 }
 
 .address dd:before {
