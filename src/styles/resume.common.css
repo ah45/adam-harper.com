@@ -116,6 +116,10 @@ li.language__ruby {
   font-weight: normal;
 }
 
+.job__overview { margin: var(--base-leading) 0; }
+
+.job__period + .job__overview { margin-top: 0; }
+
 .job__period { display: inline; }
 
 .job__period::after { content: ", "; }
