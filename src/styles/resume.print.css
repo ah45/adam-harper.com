@@ -145,7 +145,6 @@
     list-style: disc;
   }
 
-  .resume__job:nth-of-type(2) { page-break-before: always; }
 
   .resume__languages li {
     padding-left: 0px;
@@ -193,4 +192,10 @@
   }
 
   .splash, footer { display: none; }
+
+
+  /* page breaks */
+  .resume__job:nth-of-type(1) .job__period:nth-of-type(3),
+  .resume__extras { page-break-before: always; }
 }
+
