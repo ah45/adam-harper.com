@@ -39,7 +39,7 @@
 
   .address {
     width: auto;
-    margin-top: calc(var(--base-leading) * -10.53);
+    margin-top: calc(var(--base-leading) * -8.26);
 
     float: right;
 
@@ -51,16 +51,10 @@
 
   .address dt { display: none; }
 
-  dd.address__physical  { order: 1; }
+  dd.address__physical  { display: none; }
   dd.address__telephone { order: 2; }
   dd.address__email     { order: 3; }
-
-  dd.address__github {
-    display: block;
-    position: absolute;
-    top: calc(var(--base-leading) * 3.4);
-    left: 25px;
-  }
+  dd.address__github    { order: 4; }
 
   header {
     margin: calc(var(--base-leading) * 1) 0px;
@@ -73,8 +67,7 @@
     margin-top: calc(var(--base-leading) * -8);
   }
 
-  .resume__example-roles { margin-top: calc(2 * var(--base-leading)); }
-
+  .resume__example-roles,
   .resume__tagline,
   .resume__summary,
   .resume__job:first-of-type {
@@ -90,6 +83,7 @@
   }
 
   .resume__tagline em {
+    display: inline;
     font-family: var(--ff-sans-em);
     font-style: normal;
     font-weight: normal;
@@ -199,7 +193,6 @@
 
 
   /* page breaks */
-  .section.resume__technologies,
   .resume__job:nth-of-type(2)
   { page-break-before: always; }
 }
