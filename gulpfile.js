@@ -154,7 +154,7 @@ gulp.task('assets:replace', function () {
 gulp.task('watch', function () {
   gulp.watch('./src/pages/**/*', gulp.series('pages'));
   gulp.watch('./src/scripts/**/*', gulp.series('js'));
-  gulp.watch('./src/css/**/*', gulp.series('css'));
+  gulp.watch('./src/styles/**/*', gulp.series('css'));
   gulp.watch('./src/images/**/*', gulp.series('images'));
   gulp.watch('./src/well-known/**/*', gulp.series('well-known'));
   return;
