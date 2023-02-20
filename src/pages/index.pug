@@ -5,7 +5,7 @@ html(lang='en')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name='viewport', content='width=device-width')
-      title #{locals.owner} Adam Harper - Team Lead, Mentor, Project Manager, Full Stack Software Engineer
+      title #{locals.owner} Adam Harper - Strategic, Product Minded, Software Engineering Manager
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato|Cormorant+Garamond:600i|Libre+Baskerville:700')
       link(rel='stylesheet', href='styles/resume.css')
   body
@@ -22,18 +22,14 @@ html(lang='en')
     header.header--invert
       h1 Adam Harper
 
-      h2.resume__example-roles.
-        Team Lead,
-        Mentor,
-        Project&nbsp;Manager,
-        Full Stack Software Engineer.
-
       p.resume__tagline.
-        Experienced leader and developer helping agile teams deliver <em>creative solutions.</em>
+        Strategic &amp; Product Minded Software Engineering Leader
 
       dl.address
        dt.address__physical Address
        dd.address__physical
+         span.address__region Wye Valley,
+         | 
          span.address__country United Kingdom
 
        dt.address__telephone Contact Number
@@ -49,37 +45,50 @@ html(lang='en')
           span.url__domain github.com
           span.url__path /ah45
 
-    p.resume__summary.
-      Highly self-motivated and pro-active,
-      with over 20 years of full-stack software development experience
-      and managing multi disciplinary teams.
-      Skilled at seeing the bigger picture and identifying unmet needs.
-      Excellent project management skills and ability to work flexibly.
-      Adept at working in distributed, remote, teams,
-      always looking to share, teach, and learn with others.
+    section.resume__summary
+      p.
+        Veteran SaaS startup technical leader who relishes the challenges of
+        building systems, perfecting the processes to support them, and
+        developing the careers of colleagues working with them.
+
+      p.
+        An instrumental team player at the executive level who sets strategic
+        goals and aligns the company behind them to drive continuous process
+        improvements.
+        A proven technical contributor and experienced people manager who enjoys
+        taking a hands-on approach to leadership and working in an open,
+        transparent, and trusting environment.
+        Over a decade of experience in designing systems as well as devising the
+        product roadmaps and processes for creating and supporting them.
 
     aside
       section.resume__competencies
         h3 Core Competencies
         ul
+          li Team Leadership
+          li Strategic Direction
+          li Process Evolution
+          li Project Management
+          li Cultivating Careers
+      section.resume__core-values
+        h3 Core Values
+        ul
+          li Transparency
+          li Trust with Accountability
+          li Maintaining an Open Mind
+          li Unending Curiosity
+          li Being a Team Player
+      section.resume__practices
+        h3 Development Practices
+        ul
           li Functional Programming
-          li Domain & Data Driven Design
+          li Domain &amp; Data Driven Design
+          li Hypothesis Driven Development
           li Event Sourcing
           li Stream Processing
-          li User Experience Design
-          li Project Management
-          li Mentoring
-      section.resume__languages
-        h3 Language Proficiencies
-        ul
-          li.language__clojure Clojure(script)
-          li.language__sql SQL
-          li.language__javascript Javascript
-          li.language__html HTML & CSS
       section.resume__technologies
         h3 Technology Experience
         ul
-          li.technology__reframe re-frame / reagent
           li.technology__react React
           li.technology__kafka Apache Kafka
           li.technology__cassandra Apache Cassandra
@@ -92,110 +101,264 @@ html(lang='en')
 
       article.resume__job
         h3.job__title
-          | Product Director @
-          a.job__employer__yapster(href='https://www.yapster.info' alt='Yapster')
+          a.job__employer.job__employer__yapster(href='https://www.yapster.info' alt='Yapster')
             img.job__employer__yapster__logo(src='images/yapster-logo.png')
             img.job__employer__yapster__logotype(src='images/yapster-logotype.png')
 
-        p.job__overview.
-          Helped to build the platform and team behind a cross platform
-          real-time messaging system for deskless teams, used by some of the
-          UKs biggest retail and hospitality brands.
+          span.job__employer__description.
+            Mobile messaging and performance communication platform serving some
+            of the UK’s biggest brands (Caffè Nero, Next, Brewdog, VisionExpress, Revere)
 
-        p.job__period May 2020—Present
-        ul.job__accomplishments
-          li.
-            Implemented a major revision to a key product area (the “newsfeed”),
-            including a re-architecture of the core message routing process.
-          li.
-            Proposed, gained approval for, and implemented UI/UX re-designs of
-            several key areas of the app; addressing key areas of customer feedback.
-          li.
-            Drastically improved the platform’s push notifications,
-            transforming them from something users found to be an annoyance
-            into an indispensable feature.
-          li.
-            Advocated for and initiated a program of continuous feedback and
-            improvement for logging, metrics gathering, and error reporting.
-          li.
-            Designed and implemented a flexible data import facility,
-            drastically reducing the time and effort required to establish
-            automated imports for new customers.
+        section.job__overview
+          p.
+            Core member of the executive team who led product development and
+            played a key role in the company’s operations and strategy.
 
-        p.job__period 2018—April 2020
-        ul.job__accomplishments
-          li.
-            Grew the development team by 2.5x (interviewing, onboarding,
-            management, and performance review.) Defining the company playbook
-            in tandem.
-          li.
-            Mentored junior and beginner Clojure developers.
-          li.
-            Increased code quality and knowledge sharing by advocating for
-            and transitioning to a Pull Request and Review workflow.
-          li.
-            Created a culture of documentation (Wikis, READMEs, Swagger API
-            documention, etc.)
-          li.
-            Led the establishment of key partner integrations, relationships
-            and processes.
-          li.
-            Provided technical expertise during client acquisition, including
-            meeting with client sponsors and preparing presentation materials.
-          li.
-            Worked closely with account managers and project managers to define
-            the product roadmap.
+          p.
+            From joining as a Developer at this startup’s earliest stage to
+            leading engineering and customer ops as the Product and Technical
+            Director, my contributions to the codebase, product, business
+            operations, and direction of the company exemplify my strategic,
+            cross functional, process minded, and outcome driven approach.
 
-        p.job__period 2017—2018
-        ul.job__accomplishments
-          li.
-            Helped drive customer employee onboarding success by
-            automating the invitation and onboarding process.
-          li.
-            Increased customer employee engagement by
-            implementing a full-stack newsfeed and content tagging solution.
-          li.
-            Helped foster better customer employee interaction by
-            developing more interactive and informative notifications.
-          li.
-            Improved integration with third-party Human Resources systems by
-            re-architecting internal data models to flexibly cope with varying
-            sources and structures.
-          li.
-            Drove the increased use of unit testing and continuous integration
-            as a means of ensuring product reliability.
+
+        section.job__period
+          h4
+            span.job__period__timespan 2021–2023
+            span.job__period__title Product and Technical Director
+          ul.job__accomplishments
+            li
+              span.job__accomplishment__lead.
+                Played a key role in the company’s sale via acquisition by Sona
+                (backed by Google Ventures.)
+              span.job__accomplishment__detail.
+                Prepared investor slide decks, met with potential acquirers, and
+                fielded all technical due diligence requests.
+            li
+              //- demonstrates project management, work specification, being a
+              //- technical leader
+              span.job__accomplishment__lead.
+                Defined product roadmap and ensured successful delivery of 100%
+                of non-R&amp;D projects.
+              span.job__accomplishment__detail.
+                Undertook preliminary development work to uncover and remove
+                unknowns.
+                Provided comprehensive work specifications for new features and
+                enhancements.
+                Directed and reviewed team’s output to discover and eliminate
+                blockers, make appropriate scope cuts when required, and keep
+                work on track.
+            li
+              //- demonstrates process improvement, project management,
+              //- managing tradeoffs
+              span.job__accomplishment__lead.
+                Transformed ‘feature factory’ development process to deliver
+                new, supplementary, product in 3 months whilst maintaining
+                existing product release cadence.
+              span.job__accomplishment__detail.
+                Improved development processes, managed scope and resource
+                constraints.
+                Collaborated with and gained buy-in from other stakeholders.
+                Contributed 25–50% of new MRR and demonstrated a positive return
+                on investment for customers (a 5–10% increase in their revenue.)
+            li
+              //- demonstrates focus on clear goals/KPIs, instilling culture
+              span.job__accomplishment__lead.
+                Fostered a numbers based, product led, culture of transparency
+                and accountability while working in close collaboration with the CEO.
+              span.job__accomplishment__detail.
+                Standardised practices using the EOS/Traction model.
+                Every employee made contributions to company-wide scorecards,
+                gaining a sense of ownership and accountability.
+                Product measures such as Weekly Active Users became our North Star.
+                This focused the entire company on delivering improvements to the
+                product and the customer experience.
+            li
+              //- demonstrates that I can set goals/KPIs and lead teams in
+              //- meeting them
+              span.job__accomplishment__lead.
+                Set and directed team KPIs which resulted in 50% reduction in
+                support response times without adding personnel.
+              span.job__accomplishment__detail.
+                Instilled a sense of ownership and accountability throughout my
+                team giving them the confidence to initiate improvement projects.
+                Supported and directed my team in improving efficiency and
+                reducing causes of tickets.
+            li
+              //- demonstrates people management and helping with professional growth
+              span.job__accomplishment__lead.
+                Initiated and applied a quarterly performance review process
+                that drove team engagement and growth.
+              span.job__accomplishment__detail.
+                Delivered actionable and quantifiable insights into employee
+                performance and career progress.
+                Enabled clear goal setting for advancement and implemented
+                evidence based Performance Improvement Plans which were adopted
+                and standardised company-wide.
+
+        section.job__period
+          h4
+            span.job__period__timespan 2020–2021
+            span.job__period__title Head of Product
+          ul.job__accomplishments
+            li
+              //- demonstrates process improvement, working in a remote world,
+              //- instilling company culture
+              span.job__accomplishment__lead.
+                Helped enable the business to navigate the pandemic with increased
+                productivity, cooperation, and focus.
+              span.job__accomplishment__detail.
+                Trailblazed use of collaborative tools such as Asana and
+                Notion.
+                Set standards for successful, async first, remote
+                working and collaboration.
+                This centralised the company’s operations and knowledge,
+                instilled a project minded, collaborative, and open approach to
+                work, broke down silos, and fostered a documentation driven
+                culture.
+            li
+              span.job__accomplishment__lead.
+                Grew the development team by 3x with 100% new hire retention.
+              span.job__accomplishment__detail.
+                Implemented hiring framework which utilised core value and key
+                attribute scoring to ensure culture fit and suitability of hires.
+            li
+              span.job__accomplishment__lead.
+                Led the ISO 27001 certification of engineering processes.
+              span.job__accomplishment__detail.
+                Documented and ensured adherence to the processes required for
+                certification within engineering.
+                Certification enabled the company to sign contracts with some of
+                the largest UK brands and multi-national organisations.
+            li
+              span.job__accomplishment__lead.
+                Facilitated the establishment of key partner integrations,
+                relationships, and processes.
+              span.job__accomplishment__detail.
+                Worked with external partners to understand their needs,
+                provided technical direction and managed development of
+                integration features.
+                These efforts unlocked an additional £100,000 ARR via cross-sale
+                opportunities.
+            li
+              span.job__accomplishment__lead.
+                Re-engineered the company’s push notification backend so that
+                native mobile platform features were utilised.
+              span.job__accomplishment__detail.
+                This transformed the feature from a frequent source of negative
+                feedback to an indispensable part of the experience. 
+            li
+              span.job__accomplishment__lead.
+                Designed and implemented a flexible data import facility.
+              span.job__accomplishment__detail.
+                This drastically reduced the time and effort required to
+                establish imports for new customers and reduced the manual
+                overhead for workspace setup.
+                
+        section.job__period
+          h4
+            span.job__period__timespan 2018–2020
+            span.job__period__title Senior Developer &amp; Team Lead
+          ul.job__accomplishments
+            li.
+              Implemented a major revision to a key product area (the “newsfeed”),
+              including a re-architecture of the core message routing process.
+            li.
+              Proposed, gained approval for, and implemented UI/UX re-designs of
+              several key areas in the app; used assessment of customer feedback
+              and interviews to identify the problems and highlight areas of
+              improvement.
+            li.
+              Mentored junior and beginner Clojure developers.
+            li.
+              Increased code quality and knowledge sharing by advocating for
+              and transitioning to a Pull Request and Review workflow.
+            li.
+              Created a culture of documentation (Wikis, READMEs, Swagger API
+              documentation, etc.)
+            li.
+              Provided technical expertise during client acquisition, including
+              meeting with client sponsors and preparing presentation materials.
+
+        section.job__period
+          h4
+            span.job__period__timespan 2017–2018
+            span.job__period__title Developer
+          ul.job__accomplishments
+            li.
+              Helped create a smoother user onboarding process by automating the
+              invitation and onboarding workflows.
+            li.
+              Increased customer’s employee engagement by implementing a
+              full-stack newsfeed and content tagging solution.
+            li.
+              Helped foster better interaction for our customer’s employees by
+              developing more interactive and informative notifications.
+            li.
+              Improved integration with third-party Human Resources systems by
+              re-architecting internal data models to flexibly cope with varying
+              sources and structures.
+            li.
+              Drove the increased use of unit testing and continuous integration
+              as a means of ensuring product reliability.
 
       article.resume__job
-        h3.job__title Business Systems Development Manager
-        p.job__period 2012—2017
-        p.job__employer Lymington Precision Engineers Co. Ltd., Hampshire, United Kingdom
+        h3.job__title
+          span.job__employer.job__employer__lpe
+            img.job__employer__lpe__logo(src='images/lpe-logo.png', alt='Lymington Precision Engineers Co. Ltd.')
 
-        ul.job__accomplishments
-          li.
-            Enabled real-time, stream based, data analysis by
-            implementing database Change Data Capture.
-          li.
-            Helped drive 10% reduction in production lead times by
-            customising business system to support new processes and
-            production methodologies.
-          li.
-            Provided real-time production feedback on the factory floor
-            by writing bespoke dashboard software.
-          li.
-            Automated Key Performance Indicator (KPI) production and
-            distribution (Web and PDF) across the business.
-          li.
-            Delivered improved manufacturing estimates by developing a
-            finite scheduling and due-date quotation system.
-          li.
-            Streamlined supplier quotation submittal and analysis by
-            implementing a web/email based system.
-          li.
-            Automated customer order validation and entry, processing
-            complicated orders containing several hundred line items.
-          li.
-            Mentored junior team members.
+          span.job__employer__description.
+            Bespoke, subcontract, engineering firm serving industries such as
+            nuclear, space, and automotive.
+          
+        p.job__overview.
+          Implemented and maintained a modern Enterprise Resource Management
+          system, defined best practices for its use, and developed custom
+          modifications and supplementary software tools in order to maximise
+          business efficiency and streamline operations.
 
+        section.job__period
+          h4
+            span.job__period__timespan 2012—2017
+            span.job__period__title Business Systems Development Manager
+          ul.job__accomplishments
+            li.
+              Enabled real-time, stream based, data analysis by
+              implementing database Change Data Capture.
+            li.
+              Helped drive 10% reduction in production lead times by
+              customising business system to support new processes and
+              production methodologies.
+            li.
+              Provided real-time production feedback on the factory floor
+              by writing bespoke dashboard software.
+            li.
+              Automated KPI data collection, analysis, reporting, and
+              distribution (web and PDF) across the business.
+            li.
+              Delivered improved manufacturing estimates by developing a
+              finite scheduling and due-date quotation system.
+            li.
+              Streamlined supplier quotation submittal and analysis by
+              implementing a web/email based system.
+            li.
+              Automated customer order validation and entry which processed
+              complicated orders containing several hundred line items.
+            li.
+              Mentored junior team members.
+
+        section.job__period-list
+          ol
+            li.job__period__oneliner
+              span.job__period__timespan 2010—2012
+              span.job__period__title Technical Lead – Enterprise Resource Planning (ERP) Implementation
+            li.job__period__oneliner
+              span.job__period__timespan 2007—2010
+              span.job__period__title IT Manager
+            li.job__period__oneliner
+              span.job__period__timespan 2001—2007
+              span.job__period__title IT Technician
+            
     section.resume__extras
       article.resume__education
         h2 Education
@@ -220,7 +383,7 @@ html(lang='en')
       article.resume__interests
         h2 Interests
         ul
-          li Learning to play piano and studying music
+          li Playing piano and studying music
           li Scuba Diving
           li Tabletop–board/card–game design
           li Role-playing games, playing and running as the <abbr title="Games Master">GM</abbr>

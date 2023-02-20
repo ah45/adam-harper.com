@@ -49,7 +49,6 @@ a:hover, a:focus { color: #308ac9; }
 a:active { color: #54e3db; }
 
 .resume__tagline {
-  margin-top: var(--base-leading);
   margin-bottom: var(--base-leading);
 
   font-size: 1.45em;
@@ -108,6 +107,7 @@ li.language__ruby {
 .resume__job { margin-bottom: var(--base-leading); }
 
 .job__title {
+  display: flex;
   margin: 0px;
 
   font-size: 1.337em;
@@ -116,26 +116,31 @@ li.language__ruby {
   font-weight: normal;
 }
 
+.job__employer {
+  flex: 1 0 auto;
+}
+
+.job__employer__description {
+  flex: 0 1 100%;
+  align-self: flex-end;
+  padding-left: 2em;
+  font-size: 0.75em;
+  line-height: calc(var(--base-leading) * 0.75);
+}
+
 .job__overview { margin: var(--base-leading) 0; }
 
 .job__period + .job__overview { margin-top: 0; }
 
 .job__period { display: inline; }
 
-.job__period::after { content: ", "; }
-
-.job__employer {
-  display: inline;
-  font-size: 0.667em;
-}
-
-.job__period,
+.job__period__timespan,
 .job__employer {
   font-family: sans-serif;
   color: #808080;
 }
 
-.job__employer__yapster {
+.job__employer {
   display: inline-block;
   position: relative;
 }
@@ -143,14 +148,59 @@ li.language__ruby {
 .job__employer__yapster__logo {
   display: inline-block;
   position: relative;
-  top: 0.15em;
-  height: calc(var(--base-leading) * 0.75);
+  top: 0.25em;
+  height: calc(var(--base-leading) * 1.15);
   margin-left: 0.5em;
 }
 
 .job__employer__yapster__logotype {
   display: inline-block;
   position: relative;
-  top: 0.05em;
-  height: calc(var(--base-leading) * 0.55);
+  top: 0.25em;
+  height: calc(var(--base-leading) * 1.00);
+}
+
+.job__employer__lpe__logo {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+  height: calc(var(--base-leading) * 1.25);
+  width: auto;
+}
+
+.job__period {
+  display: block;
+}
+
+.job__period h4 {
+  margin: 2.5em 0 0.5em 0;
+}
+
+.job__period__timespan {
+  display: block;
+  font-weight: normal;
+}
+
+.job__period-list ol {
+  margin: 0.5em 0 3em 0;
+  list-style: none;
+}
+
+.job__period__oneliner h4:first-of-type {
+  margin-top: 0;
+}
+
+.job__period__oneliner .job__period__timespan {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+.job__accomplishment__lead {
+  display: block;
+}
+
+.job__accomplishment__detail {
+  display: block;
+  margin: 0.25em 0;
+  padding-bottom: 0.5em;
 }

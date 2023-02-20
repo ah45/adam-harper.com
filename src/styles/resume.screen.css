@@ -53,8 +53,6 @@
  * Basic formatting
  */
 @media screen {
-  p, li { max-width: 75ex; }
-
   br { display: none; }
 
   ul { list-style: none; }
@@ -83,13 +81,6 @@
     margin-top: calc(var(--base-leading) * 0.75);
   }
 
-  .resume__example-roles {
-    font-family: var(--ff-sans);
-    font-weight: normal;
-    font-size: var(--base-font-size);
-    line-height: var(--base-leading);
-  }
-
   .resume__tagline { font-family: var(--ff-sans-em); }
 
   .resume__tagline em {
@@ -99,14 +90,26 @@
     font-family: var(--ff-serif-em);
   }
 
-  .resume__example-roles,
   .resume__tagline {
     text-align: center;
   }
 
   .resume__summary {
     margin: calc(4 * var(--base-leading)) 0px var(--base-leading) 0px;
-    max-width: none;
+    font-size: 1.2em;
+  }
+
+  .resume__summary p:first-of-type {
+    font-size: 1.25em;
+  }
+
+  .job__employer__description {
+    color: #606060;
+  }
+
+  .resume__summary p,
+  .job__overview p {
+    margin: calc(var(--base-leading) / 2) 0;
   }
 }
 
@@ -162,7 +165,24 @@
     margin-top: calc(2 * var(--base-leading));
   }
 
-  .resume__job { margin-bottom: calc(2 * var(--base-leading)); }
+  .resume__job {
+    margin: calc(2 * var(--base-leading)) 0;
+    padding-top: calc(var(--base-leading) -  1px);
+    border-top: 1px solid #ccc;
+  }
+
+  .job__period h4 {
+    font-size: 1.25em;
+  }
+
+  .job__accomplishment__lead {
+    font-size: 1.05em;
+  }
+
+  .job__accomplishment__detail {
+    font-weight: lighter;
+    color: #606060;
+  }
 
   .job__period::after { content: ""; }
 
@@ -364,6 +384,7 @@
   header .address {
     display: flex;
     flex-flow: row wrap;
+    gap: var(--base-leading) 1em;
     align-content: center;
     justify-content: center;
   }
@@ -378,14 +399,10 @@
     overflow: hidden;
   }
 
-  header dd.address__github    { flex: 0 0 35%;  order: 1; }
-  header dd.address__telephone { flex: 0 0 35%;  order: 2; }
-  header dd.address__physical  { flex: 0 0 30%;  order: 3; }
-  header dd.address__email     { flex: 0 0 auto; order: 4; }
-
-  header dd.address__email     { margin: 0px auto 0px 35%; }
-
-  header dd.address__physical  { text-align: right; }
+  header dd.address__email     { order: 1; }
+  header dd.address__telephone { order: 2; }
+  header dd.address__physical  { order: 3; }
+  header dd.address__github    { display: none; }
 }
 
 
@@ -403,6 +420,7 @@
   aside {
     display: flex;
     flex-flow: row wrap;
+    gap: var(--base-leading) 1em;
     align-content: center;
     justify-content: center;
     margin-bottom: var(--base-leading);
@@ -410,9 +428,10 @@
 
   aside li { margin-left: 0px; }
 
-  .resume__competencies { flex: 0 0 40%; }
-  .resume__languages    { flex: 0 0 35%; }
-  .resume__technologies { flex: 0 0 20%; }
+  .resume__competencies { flex: 1; }
+  .resume__core-values  { flex: 1; }
+  .resume__practices    { flex: 1; }
+  .resume__technologies { flex: 1; }
 
   aside h3 {
     width: 1em; /* force word wrapping */
