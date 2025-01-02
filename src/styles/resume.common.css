@@ -146,6 +146,14 @@ li.language__ruby {
   position: relative;
 }
 
+.job__employer__cupa__logo {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+  height: calc(var(--base-leading) * 1.25);
+  margin-left: 0.5em;
+}
+
 .job__employer__yapster__logo {
   display: inline-block;
   position: relative;
