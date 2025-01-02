@@ -232,7 +232,6 @@
   .splash, footer { display: none; }
 
   /* page breaks */
-  .job__period:nth-of-type(3),
   .resume__job:nth-of-type(2)
   { page-break-before: always; }
 }
