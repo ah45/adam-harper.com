@@ -161,6 +161,10 @@
     overflow: hidden;
   }
 
+  .address__telephone {
+    display: none;
+  }
+
   .resume__work-experience h2 {
     margin-top: calc(2 * var(--base-leading));
   }
@@ -400,7 +404,7 @@
   }
 
   header dd.address__email     { order: 1; }
-  header dd.address__telephone { order: 2; }
+  header dd.address__telephone { display: none; }
   header dd.address__physical  { order: 3; }
   header dd.address__github    { display: none; }
 }
