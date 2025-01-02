@@ -1,4 +1,5 @@
 {
+  "images/cupa-logo.png": "images/cupa-logo-9cbb9353f4.png",
   "images/lpe-logo.png": "images/lpe-logo-7b3cfcd164.png",
   "images/tran-mau-tri-tam-50424.1024.jpg": "images/tran-mau-tri-tam-50424-3aec92b261.1024.jpg",
   "images/tran-mau-tri-tam-50424.2056.jpg": "images/tran-mau-tri-tam-50424-e81d220396.2056.jpg",
@@ -9,5 +10,5 @@
   "images/yapster-logo.png": "images/yapster-logo-94f41572d1.png",
   "images/yapster-logotype.png": "images/yapster-logotype-266e6939c8.png",
   "scripts/splash-scroll.js": "scripts/splash-scroll-2156bd7d5d.js",
-  "styles/resume.css": "styles/resume-6e336fc67c.css"
+  "styles/resume.css": "styles/resume-d94ac0fc99.css"
 }
