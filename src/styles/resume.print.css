@@ -84,6 +84,7 @@
 
   .resume__tagline {
     margin: 0.5em 0;
+    max-width: 65%;
     font-family: var(--ff-serif-em);
     font-style: italic;
     font-weight: 600;
