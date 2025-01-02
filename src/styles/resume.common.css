@@ -79,6 +79,7 @@ dd.address__physical:before { background-image: url("../icons/globe.svg"); }
 dd.address__telephone:before { background-image: url("../icons/phone.svg"); }
 dd.address__email:before { background-image: url("../icons/email.svg"); }
 dd.address__github:before { background-image: url("../icons/github.svg"); }
+dd.address__linkedin:before { background-image: url("../icons/linkedin.svg"); }
 
 .resume__languages li::before { content: ""; }
 
