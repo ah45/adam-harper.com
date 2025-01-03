@@ -130,10 +130,10 @@
 
   header                   { order: 1; }
   .resume__summary         { order: 2; }
-  aside                    { order: 3; }
   .resume__work-experience { order: 4; }
-  .resume__extras          { order: 5; }
-  footer                   { order: 6; }
+  aside                    { order: 5; }
+  .resume__extras          { order: 6; }
+  footer                   { order: 7; }
 
   header {
     display: flex;
