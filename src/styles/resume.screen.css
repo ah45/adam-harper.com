@@ -165,6 +165,10 @@
     display: none;
   }
 
+  .address__linkedin .url__path__uid {
+    display: none;
+  }
+
   .resume__work-experience h2 {
     margin-top: calc(2 * var(--base-leading));
   }
