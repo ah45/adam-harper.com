@@ -110,10 +110,6 @@
     margin-top: 1em;
   }
 
-  .job__employer__description {
-    color: #e0e0e0;
-  }
-
   .job__overview {
     margin-top: calc(var(--base-leading) * 0.25);
     margin-bottom: calc(var(--base-leading) * 0.75 );
@@ -129,7 +125,6 @@
   }
 
   .job__period__timespan {
-    color: #e0e0e0;
     font-size: 0.8335em;
     line-height: 0.8335em;
   }
