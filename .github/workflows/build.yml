@@ -28,3 +28,4 @@ jobs:
           publish_dir: ./
           github_token: ${{ secrets.GITHUB_TOKEN }}
           exclude_assets: '.github,build.py'
+          cname: adam-harper.com
