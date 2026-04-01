@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/ah45
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://adam-harper.com
+  * I am ah45 (https://keybase.io/ah45) on keybase.
+  * I have a public key with fingerprint B072 177B 3D8C 46B3 7E95  2785 38BB DA97 7152 B5F2
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e57fe453643ec3286225d7596c41e3f062f0c13e0bc285c751dec8e66d678d910a",
+      "fingerprint": "b072177b3d8c46b37e95278538bbda977152b5f2",
+      "host": "keybase.io",
+      "key_id": "38bbda977152b5f2",
+      "kid": "0101e57fe453643ec3286225d7596c41e3f062f0c13e0bc285c751dec8e66d678d910a",
+      "uid": "56c2bf3fc86da4df446598c4b6ed3619",
+      "username": "ah45"
+    },
+    "service": {
+      "hostname": "adam-harper.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1536759218,
+  "expire_in": 157680000,
+  "prev": "94229c803292405cf8f010a28a4d94ccd07d6211ca8423edec381aed03d3ce82",
+  "seqno": 3,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMInAnicrVJdSBVBGL3+hrdMK4JefGgr+7vazsz+zF6EyEKLqEgrKKPL7sysd1Pv
+XnevppkGEhREwUUqDDREIqWMCipSCjMJNCqs6EHzweghKUPUQujHZqXeemxehvm+
+c86c7/D1pyf5/Am4Z/hSZdHdqYRnjy9W+Uqal9+pEwyb1grBOqGMzV+snDI3Fiqz
+qBAURCACJqsmk2SkSIgRBLECoUxVWVOIBBgyRQWaIgGIiQaBWCaqDCgjmCkKVVRM
+NSDqQkAwrUgpc6KOFYlxWUNUIVBVA1FMJMVAKtNkqGIZYcOguqaqQIaGbEJODNuu
+x+DmDN1luZbNa/wRmrf3D/x/9l01LycrBBomMglWqC5RU5IUWePWDYVRpADNA7rM
+iegVjKP1sCQL9QGBV6otwrxQvSn+dqlekRPWnShzcoldwalRx47ZxC7nzXAsFnWD
+HjlWG/XQx5gR+qMTMqwI5TFyRjVzXMuOCEHAkSRmecKAT8qngwAHBFYTtRwWsjyE
+rCpY5Mf7h1VzSU2CUCNYRFCDkigTE5s8Lh1iPpkmEUJFlSoQAKJjCSLGQ0EY6IyK
+iCLCsBeyyyojthBE3KZeyiVdqzSix6ocJtT39R5O9iX4fakpid56+fxpmX+Xzp1a
+MFf0Voou0wvG1xp70fTQr7GXjYubS1el3ssuzOxMHG9rGP41XHbjCOgJdfUlHQjf
+Kvj07fja2QclcTFz056C8drZufK2nTOdxTmXaza/sT9ODgQGwx/yhB0/R4pz7oyt
+zqg3Oq4k5e+5ffrR9ZXtN9d86S086F/WffRqxnureWL/3kPrRnZ9TnnROhffuihv
++yn/9OhsQJh5XpPWkTo6+e7uQurgwYn7gwPt8d0XQkm1Dd+TW0nTlsz87q95YXnb
+q60lLRvSu3Mnsl4/PN/VfzK5JH4tnpZ/piDrSfbIvslXGydW5O8jFl6S2HTivhFJ
+K/7Rktf+tGbx0NJzjWfB+pZsZ7X0G0M0PYM=
+=74Pc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ah45
+
+==================================================================
