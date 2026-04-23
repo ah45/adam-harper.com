@@ -1,0 +1,11 @@
+base_url = "https://adam-harper.com"
+title = "Adam Harper · Engineering Leadership"
+description = ""
+author = "Adam Harper"
+
+default_language = "en"
+
+generate_feeds = false
+feed_filenames = ["feed.xml"]
+
+taxonomies = []
