@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero compact">
+  <div class="container">
+    <h1>Colophon</h1>
+    <div class="subtitle">How <a href="/">this site</a> is built & hosted</div>
+  </div>
+</section>
+<main class="container">
+  <section>
+    <p>This site is built with <a href="https://www.getzola.org/">Zola</a>, a fast static site generator written in Rust.</p>
+    <h2>Design & Implementation</h2>
+    <ul>
+      <li>Custom, hand-crafted HTML and CSS</li>
+      <li>No JavaScript frameworks</li>
+      <li>Responsive, accessible, and fast</li>
+    </ul>
+    <h2>Fonts</h2>
+    <ul>
+      <li><a href="https://rsms.me/inter/">Inter</a> (sans-serif)</li>
+      <li><a href="https://fonts.google.com/specimen/Playfair+Display">Playfair Display</a> (serif)</li>
+    </ul>
+    <h2>Tools & Infrastructure</h2>
+    <ul>
+      <li><a href="https://www.getzola.org/">Zola</a> for static site generation</li>
+      <li><a href="https://mise.jdx.dev/">mise</a> for tool version management</li>
+      <li><a href="https://pages.cloudflare.com/">Cloudflare Pages</a> for hosting</li>
+    </ul>
+    <h2>Domain</h2>
+    <ul>
+      <li><a href="https://adam-harper.com">adam-harper.com</a> managed via Cloudflare DNS</li>
+    </ul>
+    <h2>Content & Copyright</h2>
+    <ul>
+      <li>All content © Adam Harper</li>
+      <li>Code and configuration MIT licensed unless otherwise noted</li>
+    </ul>
+  </section>
+  <div class="colophon-link">
+    <a href="/" title="Back to homepage">← Back to homepage</a>
+  </div>
+</main>
+{% endblock content %}

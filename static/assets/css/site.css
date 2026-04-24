@@ -62,7 +62,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  h2 { font-family: "Playfair Display", serif; }
+  h2 {
+    font-family: "Playfair Display", serif;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   a { color: inherit; text-decoration: none; }
   a:focus-visible, button:focus-visible {
     outline: 0.15rem solid var(--brand-primary);
@@ -75,7 +81,6 @@
     max-width: 68rem;
     margin-inline: auto;
     padding-inline: min(5vw, 1.5rem);
-    padding-block: 5rem;
     position: relative;
     z-index: var(--z-content);
   }
@@ -104,6 +109,12 @@
     background: var(--gradient-hero);
     z-index: 1;
   }
+
+  .hero.compact {
+    padding-block: clamp(1rem, 4vw, 3rem);
+  }
+  .hero.compact .container { padding-block: 0; }
+
   .hero > * { position: relative; z-index: 2; }
   .subtitle {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
@@ -264,7 +275,6 @@
   footer.footer-cta {
     text-align: center;
     margin-top: 6rem;
-    padding-bottom: 4rem;
     opacity: 0.9;
   }
   .footer-title {
@@ -286,6 +296,25 @@
   }
   .footer-links a:hover {
     color: var(--text-primary);
+  }
+
+  .colophon-link {
+    text-align: center;
+    padding-block-start: 5rem;
+    padding-block-end: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+  }
+  .colophon-link a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--brand-primary);
+    padding-bottom: 1px;
+  }
+  .colophon-link:hover,
+  .colophon-link:focus-within {
+    opacity: 0.7;
   }
 
   .not-found {
