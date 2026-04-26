@@ -33,7 +33,6 @@
     line-height: var(--h1-line-height);
     background: var(--gradient-brand-strong);
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -45,7 +44,6 @@
     line-height: var(--h2-line-height);
     background: var(--gradient-brand);
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
