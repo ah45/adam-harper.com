@@ -110,12 +110,52 @@
     padding: 2.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+  .strength-card p,
+  .achievement-card p {
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--text-card);
+    line-height: 1.55;
+  }
   
   .strength-card { background: rgb(230 206 154 / 15%); }
-  
+
+  .strength-card h3 {
+    font-family: var(--font-family-heading);
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    text-transform: uppercase;
+    letter-spacing: var(--h3-letter-spacing);
+    margin: 0 0.5rem 0 0;
+    color: var(--text-card-heading);
+  }
+
+  .strength-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
   .achievement-card {
     background: white;
     position: relative;
+  }
+
+  .achievement-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: var(--h3-letter-spacing);
+    color: var(--text-card-heading);
+  }
+  
+  .achievement-card p {
+    margin-top:0.5rem;
+    color: var(--text-secondary);
+  }
+  
+  .achievement-card hr {
+    margin:1.5rem 0;
+    opacity:0.3;
   }
 
   @media (hover: hover) {
@@ -150,46 +190,6 @@
       pointer-events: none;
       text-shadow: 1px 1px 2px var(--text-primary);
     }
-  }
-
-  .strength-card h3 {
-    font-family: var(--font-family-heading);
-    font-size: var(--h3-font-size);
-    line-height: var(--h3-line-height);
-    text-transform: uppercase;
-    letter-spacing: var(--h3-letter-spacing);
-    margin: 0 0.5rem 0 0;
-    color: var(--text-card-heading);
-  }
-
-  .achievement-card h3 {
-    font-size: 1rem;
-    margin: 0;
-    letter-spacing: var(--h3-letter-spacing);
-    color: var(--text-card-heading);
-  }
-
-  .strength-card p,
-  .achievement-card p {
-    margin-top: 0.75rem;
-    font-size: 1.05rem;
-    color: var(--text-card);
-    line-height: 1.55;
-  }
-
-  .strength-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-  }
-
-  .achievement-card p {
-    margin-top:0.5rem;
-    color: var(--text-secondary);
-  }
-  
-  .achievement-card hr {
-    margin:1.5rem 0;
-    opacity:0.3;
   }
 
   .links {
@@ -292,7 +292,6 @@
   .footer-links a:hover {
     color: var(--text-primary);
   }
-
 
   .not-found {
     display: flex;
