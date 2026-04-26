@@ -201,7 +201,7 @@
 
   .btn {
     padding-block: 0.9rem;
-    padding-inline: 1.4rem;
+    padding-inline: 1.1rem;
     border-radius: 0.75rem;
     font-size: 1rem;
     font-weight: 600;
@@ -210,6 +210,16 @@
     color: var(--text-primary);
     text-decoration: none;
   }
+
+  @media (width <= 400px) {
+    .links { gap: 0.75rem; }
+    .btn { padding-inline: 0.75rem; }
+  }
+
+  @media (width <= 350px) {
+  .links { gap: 0.5rem; }
+  .btn { padding-inline: 0.5rem; }
+}
 
   .btn.primary {
     background: linear-gradient(135deg, var(--brand-primary), var(--brand-dark));
