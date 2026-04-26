@@ -5,6 +5,8 @@ author = "Adam Harper"
 
 default_language = "en"
 
+compile_sass = true
+
 generate_feeds = false
 feed_filenames = ["feed.xml"]
 
