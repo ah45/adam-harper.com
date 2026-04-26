@@ -130,3 +130,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/vim,node,macos,vagrant,windows
 
 public/
+package-lock.json

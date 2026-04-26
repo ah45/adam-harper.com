@@ -1,0 +1,12 @@
+{
+  "name": "adam-harper.com",
+  "private": true,
+  "devDependencies": {
+    "stylelint": "^17.9.0",
+    "stylelint-config-standard-scss": "^17.0.0"
+  },
+  "scripts": {
+    "lint:scss": "stylelint 'sass/**/*.{scss,sass}'",
+    "lint:scss:fix": "stylelint 'sass/**/*.{scss,sass}' --fix"
+  }
+}
