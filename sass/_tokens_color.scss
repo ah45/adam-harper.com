@@ -1,0 +1,18 @@
+$color-page-bg: #f7f5f2;
+$color-text-primary: #2a2a2a;
+$color-text-muted: #6f6f6f;
+$color-text-secondary: #3a3a3a;
+$color-text-card: #444;
+$color-text-card-heading: #7a704f;
+$color-brand-ultra-light: #e6cb95;
+$color-brand-light: #cba453;
+$color-brand-primary: #c2772b;
+$color-brand-dark: #8a4a21;
+$color-gradient-brand: linear-gradient(90deg, $color-brand-light, $color-brand-ultra-light);
+$color-gradient-brand-strong: linear-gradient(90deg, $color-brand-primary, $color-brand-light);
+$color-gradient-hero: linear-gradient(to bottom, rgb(247 245 242 / 60%) 35%, $color-page-bg 100%);
+$color-shadow-hover: rgb(120 90 30 / 20%);
+$color-border-light: rgb(0 0 0 / 8%);
+$color-border-primary: rgb(160 130 60 / 25%);
+$color-link-text: #2b6ac2;
+$color-link-text-visited: #79a9ed;

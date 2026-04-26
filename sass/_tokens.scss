@@ -1,0 +1,67 @@
+@use 'tokens_color' as *;
+@use 'tokens_typography' as *;
+@use 'tokens_zindex' as *;
+@use 'tokens_spacing' as *;
+
+// Output as CSS custom properties
+:root {
+  // Color tokens
+  --page-bg: #{$color-page-bg};
+  --text-primary: #{$color-text-primary};
+  --text-muted: #{$color-text-muted};
+  --text-secondary: #{$color-text-secondary};
+  --text-card: #{$color-text-card};
+  --text-card-heading: #{$color-text-card-heading};
+  --text-link-primary: #{$color-link-text};
+  --text-link-visited: #{$color-link-text-visited};
+  --brand-ultra-light: #{$color-brand-ultra-light};
+  --brand-light: #{$color-brand-light};
+  --brand-primary: #{$color-brand-primary};
+  --brand-dark: #{$color-brand-dark};
+  --gradient-brand: #{$color-gradient-brand};
+  --gradient-brand-strong: #{$color-gradient-brand-strong};
+  --gradient-hero: #{$color-gradient-hero};
+  --shadow-hover: #{$color-shadow-hover};
+  --border-light: #{$color-border-light};
+  --border-primary: #{$color-border-primary};
+
+  // Typography tokens
+  --font-family-base: #{$typography-font-family-base};
+  --font-size-base: #{$typography-font-size-base};
+  --font-size-lg: #{$typography-font-size-lg};
+  --font-size-sm: #{$typography-font-size-sm};
+  --line-height-base: #{$typography-line-height-base};
+  --font-weight-normal: #{$typography-font-weight-normal};
+  --font-weight-bold: #{$typography-font-weight-bold};
+
+  // Heading tokens
+  --font-family-heading: #{$typography-font-family-heading};
+  --h1-font-size: #{$typography-h1-font-size};
+  --h1-font-weight: #{$typography-h1-font-weight};
+  --h1-line-height: #{$typography-h1-line-height};
+  --h1-letter-spacing: #{$typography-h1-letter-spacing};
+  --h2-font-size: #{$typography-h2-font-size};
+  --h2-font-weight: #{$typography-h2-font-weight};
+  --h2-line-height: #{$typography-h2-line-height};
+  --h2-letter-spacing: #{$typography-h2-letter-spacing};
+  --h3-font-size: #{$typography-h3-font-size};
+  --h3-font-weight: #{$typography-h3-font-weight};
+  --h3-line-height: #{$typography-h3-line-height};
+  --h3-letter-spacing: #{$typography-h3-letter-spacing};
+  --h4-font-size: #{$typography-h4-font-size};
+  --h4-font-weight: #{$typography-h4-font-weight};
+  --h4-line-height: #{$typography-h4-line-height};
+  --h4-letter-spacing: #{$typography-h4-letter-spacing};
+
+  // Z-index tokens
+  --z-noise: #{$z-index-noise};
+  --z-content: #{$z-index-content};
+  --z-overlay: #{$z-index-overlay};
+
+  // Spacing tokens
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+}

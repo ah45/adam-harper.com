@@ -1,0 +1,8 @@
+# Run stylelint only if SCSS/SASS files are staged
+if git diff --cached --name-only | grep -E '\.s[ac]ss$'; then
+  mise lint-scss
+  if [ $? -ne 0 ]; then
+    echo "\nSCSS/SASS lint errors detected. Commit aborted."
+    exit 1
+  fi
+fi

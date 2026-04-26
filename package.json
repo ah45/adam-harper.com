@@ -1,0 +1,14 @@
+{
+  "name": "adam-harper.com",
+  "private": true,
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "stylelint": "^17.9.0",
+    "stylelint-config-standard-scss": "^17.0.0"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "lint:scss": "stylelint 'sass/**/*.{scss,sass}'",
+    "lint:scss:fix": "stylelint 'sass/**/*.{scss,sass}' --fix"
+  }
+}

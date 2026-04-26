@@ -1,2 +1,23 @@
 [tools]
 zola = '0.22.1'
+node = 'lts'
+
+[tasks.install-js]
+run = "npm install"
+
+[tasks.lint-scss]
+description = "Lint SCSS/SASS files using stylelint."
+
+usage = '''
+flag "--fix" help="Apply recommended fixes"
+'''
+
+depends = ["install-js"]
+
+run = '''
+{% if usage.fix %}
+  npm run lint:scss:fix
+{% else %}
+  npm run lint:scss
+{% endif %}
+'''
